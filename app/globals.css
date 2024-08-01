@@ -2,32 +2,258 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Open sidebar */
+.sidebar.open {
+  right: 0;
+}
+.burger-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger-menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.character,
+.character-container {
+  transition: all 0.5s ease;
+}
+
+.character {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-container,
+.about-me-container {
+  background-color: #f2dace;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-me-container {
+  flex-direction: column;
+}
+
+.character-container:hover,
+.character:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.character-container:active,
+.character:active {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
+.top-left-bubble,
+.top-right-bubble,
+.bottom-left-bubble,
+.bottom-right-bubble {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  overflow: hidden;
+}
+
+.top-left-bubble {
+  top: -7vw;
+  left: -7vw;
+}
+
+.top-right-bubble {
+  top: -5vw;
+  right: -7vw;
+}
+
+.bottom-left-bubble {
+  bottom: -7vw;
+  left: -7vw;
+}
+
+.bottom-right-bubble {
+  bottom: -7vw;
+  right: -5vw;
+}
+
+.shape {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.shape-1 {
+  transform: rotate(180deg);
+}
+
+.shape-2 {
+  transform: rotate(45deg);
+}
+
+.shape-4 {
+  transform: rotate(-90deg);
+}
+
+.arts-apparence {
+  margin: 20vh 10vw 10vh 10vw;
+}
+
+.arts-bd {
+  margin: 10vh 10vw;
+}
+
+.arts-col {
+  margin: 10vh 10vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20vh;
+}
+
+.art-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10vw;
+}
+
+.arts-col img {
+  height: 500px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.art-text > * {
+  padding: 20px;
+}
+
+.art-header {
+  background-color: #42a8b4;
+  color: white;
+}
+
+.arts-col h1,
+.arts-apparence h1,
+.art-bd h1 {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #fff;
+  display: inline-flex;
+}
+
+.art-header p {
+  margin-bottom: 5px;
+}
+
+.art-content {
+  font-size: 1.3rem;
+}
+
+.arts-apparence,
+.arts-bd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.art-header {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.art-content-apparence,
+.art-content-bd {
+  padding: 20px;
+}
+.art-apparence-showing,
+.art-bd-showing {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.art-apparence-showing {
+  gap: 20px;
+}
+
+.art-bd-showing {
+  gap: 40px;
+  margin-top: 20px;
+}
+.art-apparence-showing img {
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.art-bd-showing img {
+  width: 20vw;
+  height: 50vh;
+  object-fit: cover;
 }

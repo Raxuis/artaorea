@@ -1,113 +1,140 @@
+import BurgerMenu from "@/src/components/BurgerMenu";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="header">
+
+        <div className="top-left-bubble">
+          <img src="/assets/icons/shape-1.png" alt="shape-1" className="shape shape-1" />
         </div>
+        <div className="top-right-bubble">
+          <img src="/assets/icons/shape-2.png" alt="shape-2" className="shape shape-2" />
+        </div>
+        <div className="bottom-left-bubble">
+          <img src="/assets/icons/shape-2.png" alt="shape-1" className="shape shape-3" />
+        </div>
+        <div className="bottom-right-bubble">
+          <img src="/assets/icons/shape-1.png" alt="shape-2" className="shape shape-4" />
+        </div>
+
+        <div className="character-container">
+          <img src="/assets/character.png" alt="Artaoréa" className="character" />
+        </div>
+
+        <BurgerMenu />
+
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="arts-col" id="works">
+        <div className="art-container mere-nature-container">
+          <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature" />
+          <div className="art-text">
+            <div className="art-header mere-nature-header">
+              <h1>Mère Nature</h1>
+              <p>1,20m</p>
+              <p>Technique: modelage, collage, composition</p>
+            </div>
+            <div className="art-content">
+              <p>Cette femme, inspirer de l'allégorie de la nature, représenter l'origine de la terre et de tout ce qui la
+                compose. Elle est la source de la vie et l'incarne sous la forme de la mère. Cette image de la femme
+                symbolise notre Terre et est vénérée dans diverses cultures, et représentée à travers les arts.
+                Elle reflète la déesse de la culture, la mère de toutes choses qui donne la vie, qui en son sein nourrit les
+                plantes, les animaux et les hommes.
+                C'est en élevant son pouvoir nourricier qu'elle engendre les montagnes, rivières, elle est à la source des
+                êtres vivants, des végétaux, des minéraux.</p>
+            </div>
+          </div>
+        </div>
+        <div className="art-container arbre-container">
+          <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre" />
+          <div className="art-text">
+            <div className="art-header arbre-header">
+              <h1>L'arbre</h1>
+              <p>30 x 20 x 20 cm</p>
+              <p>Technique: assemblage, fil de fer</p>
+            </div>
+            <div className="art-content">
+              <p>La nature, un paradis lointain, une terre dévastatrice dont l'homme est dépendant bien qu'il se convainc du
+                contraire. J'ai voulu représenter dans cette composition l'alliage complexe qui lie l'homme et la nature.
+                L'homme transforme la nature, la modifie à coup d'outils et de matériaux, mais la nature compose l'homme et
+                lui fournit les ressources nécessaires à la vie.</p>
+            </div>
+          </div>
+        </div>
+        <div className="art-container fuite-container">
+          <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite" />
+          <div className="art-text">
+            <div className="art-header fuite-header">
+              <h1>Fuite du temps</h1>
+              <p>20 x 25 x 10 cm</p>
+              <p>Technique: modelage, peinture</p>
+            </div>
+            <div className="art-content">
+              <p>Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que
+                son essence est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous
+                amenant vers la mort.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      <section className="arts-apparence">
+        <div className="art-header">
+          <h1>L'apparence cachée</h1>
+          <p>20 x 20 x 30 cm</p>
+          <p>Technique: modelage, peinture</p>
+        </div>
+        <div className="art-content art-content-apparence">
+          <p>Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que
+            son essence est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous
+            amenant vers la mort.</p>
+        </div>
+        <div className="art-apparence-showing">
+          <img src="/assets/works/apparence-1.jpeg" alt="Apparence 1" className="apparence-1" />
+          <img src="/assets/works/apparence-2.jpeg" alt="Apparence 2" className="apparence-2" />
+          <img src="/assets/works/apparence-3.jpeg" alt="Apparence 3" className="apparence-3" />
+        </div>
+      </section>
+      <section className="arts-col">
+        <div className="art-container unknwon-header">
+          <img src="/assets/works/unknown.jpeg" alt="Unknown" className="unknown" />
+          <div className="art-text">
+            <div className="art-header unknwon-header">
+              <h1>Unknown</h1>
+              <p>Dimensions inconnues</p>
+              <p>Technique: inconnue</p>
+            </div>
+            <div className="art-content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae natus deleniti perferendis ratione laborum
+                asperiores modi! Totam veniam minus quod nemo voluptatum consequuntur sunt reiciendis quos optio distinctio
+                corrupti qui voluptas earum porro officiis dolore, necessitatibus aut, natus aspernatur. Similique quos
+                quibusdam est maiores, at ad molestias aspernatur libero minima.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="arts-bd">
+        <div className="art-header">
+          <h1>Page de BD</h1>
+          <p>25 x 35 cm</p>
+          <p>Technique: crayon de couleur</p>
+        </div>
+        <div className="art-bd-showing">
+          <img src="/assets/works/bd-1.jpeg" alt="bd 1" className="bd-1" />
+          <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2" />
+          <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3" />
+        </div>
+        <div className="art-content art-content-bd">
+          <p>
+            Le harcelement, un rejet de l'autre et de ces différences, déversant une aversion sur celui qui attise ma
+            curiosité. Dans cette bande dessinée, je dénonce le harcèlement et ses retombées psychologiques sur ses victimes
+            et sur son entourage. De plus, je m'intéresse aux processus qui amènent le harceleur à agir et à la prise de
+            conscience qui s'ensuit.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </div>
+      </section>
+    </>
   );
 }
