@@ -1,11 +1,43 @@
+"use client";
+
 import BurgerMenu from "@/src/components/BurgerMenu";
-import Image from "next/image";
+import Lenis from "lenis";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import animations from "@/src/utils/animations";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const container = useRef();
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    animations.forEach(({ target, fromOptions, toOptions, options }) => {
+      if (fromOptions) {
+        gsap.from(target, fromOptions);
+      }
+      if (toOptions) {
+        gsap.to(target, toOptions);
+      }
+      if (options) {
+        gsap.to(target, options);
+      }
+    });
+  }, []);
+
   return (
     <>
       <div className="header">
-
         <div className="top-left-bubble">
           <img src="/assets/icons/shape-1.png" alt="shape-1" className="shape shape-1" />
         </div>
@@ -18,15 +50,11 @@ export default function Home() {
         <div className="bottom-right-bubble">
           <img src="/assets/icons/shape-1.png" alt="shape-2" className="shape shape-4" />
         </div>
-
         <div className="character-container">
           <img src="/assets/character.png" alt="Artaoréa" className="character" />
         </div>
-
         <BurgerMenu />
-
       </div>
-
       <section className="arts-col" id="works">
         <div className="art-container mere-nature-container">
           <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature" />
@@ -37,13 +65,14 @@ export default function Home() {
               <p>Technique: modelage, collage, composition</p>
             </div>
             <div className="art-content">
-              <p>Cette femme, inspirer de l'allégorie de la nature, représenter l'origine de la terre et de tout ce qui la
+              <p>
+                Cette femme, inspirer de l'allégorie de la nature, représenter l'origine de la terre et de tout ce qui la
                 compose. Elle est la source de la vie et l'incarne sous la forme de la mère. Cette image de la femme
-                symbolise notre Terre et est vénérée dans diverses cultures, et représentée à travers les arts.
-                Elle reflète la déesse de la culture, la mère de toutes choses qui donne la vie, qui en son sein nourrit les
-                plantes, les animaux et les hommes.
-                C'est en élevant son pouvoir nourricier qu'elle engendre les montagnes, rivières, elle est à la source des
-                êtres vivants, des végétaux, des minéraux.</p>
+                symbolise notre Terre et est vénérée dans diverses cultures, et représentée à travers les arts. Elle reflète
+                la déesse de la culture, la mère de toutes choses qui donne la vie, qui en son sein nourrit les plantes, les
+                animaux et les hommes. C'est en élevant son pouvoir nourricier qu'elle engendre les montagnes, rivières, elle
+                est à la source des êtres vivants, des végétaux, des minéraux.
+              </p>
             </div>
           </div>
         </div>
@@ -56,10 +85,12 @@ export default function Home() {
               <p>Technique: assemblage, fil de fer</p>
             </div>
             <div className="art-content">
-              <p>La nature, un paradis lointain, une terre dévastatrice dont l'homme est dépendant bien qu'il se convainc du
+              <p>
+                La nature, un paradis lointain, une terre dévastatrice dont l'homme est dépendant bien qu'il se convainc du
                 contraire. J'ai voulu représenter dans cette composition l'alliage complexe qui lie l'homme et la nature.
                 L'homme transforme la nature, la modifie à coup d'outils et de matériaux, mais la nature compose l'homme et
-                lui fournit les ressources nécessaires à la vie.</p>
+                lui fournit les ressources nécessaires à la vie.
+              </p>
             </div>
           </div>
         </div>
@@ -72,14 +103,15 @@ export default function Home() {
               <p>Technique: modelage, peinture</p>
             </div>
             <div className="art-content">
-              <p>Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que
-                son essence est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous
-                amenant vers la mort.</p>
+              <p>
+                Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que son
+                essence est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous amenant vers
+                la mort.
+              </p>
             </div>
           </div>
         </div>
       </section>
-
       <section className="arts-apparence">
         <div className="art-header">
           <h1>L'apparence cachée</h1>
@@ -87,9 +119,10 @@ export default function Home() {
           <p>Technique: modelage, peinture</p>
         </div>
         <div className="art-content art-content-apparence">
-          <p>Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que
-            son essence est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous
-            amenant vers la mort.</p>
+          <p>
+            Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que son essence
+            est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous amenant vers la mort.
+          </p>
         </div>
         <div className="art-apparence-showing">
           <img src="/assets/works/apparence-1.jpeg" alt="Apparence 1" className="apparence-1" />
@@ -126,7 +159,7 @@ export default function Home() {
           <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2" />
           <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3" />
         </div>
-        <div className="art-content art-content-bd">
+        <div className="art-content art-content-bd mb-10">
           <p>
             Le harcelement, un rejet de l'autre et de ces différences, déversant une aversion sur celui qui attise ma
             curiosité. Dans cette bande dessinée, je dénonce le harcèlement et ses retombées psychologiques sur ses victimes
