@@ -1,11 +1,11 @@
 "use client";
 
-import BurgerMenu from "@/src/components/BurgerMenu";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import animations from "@/src/utils/animations";
+import Header from "@/src/components/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,24 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="header">
-        <div className="top-left-bubble">
-          <img src="/assets/icons/shape-1.png" alt="shape-1" className="shape shape-1" />
-        </div>
-        <div className="top-right-bubble">
-          <img src="/assets/icons/shape-2.png" alt="shape-2" className="shape shape-2" />
-        </div>
-        <div className="bottom-left-bubble">
-          <img src="/assets/icons/shape-2.png" alt="shape-1" className="shape shape-3" />
-        </div>
-        <div className="bottom-right-bubble">
-          <img src="/assets/icons/shape-1.png" alt="shape-2" className="shape shape-4" />
-        </div>
-        <div className="character-container">
-          <img src="/assets/character.png" alt="Artaoréa" className="character" />
-        </div>
-        <BurgerMenu />
-      </div>
+      <Header imageSrc="/assets/character.png" alt="Artaoréa" />
       <section className="arts-col" id="works">
         <div className="art-container mere-nature-container">
           <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature" />
@@ -161,7 +144,7 @@ export default function Home() {
         </div>
         <div className="art-content art-content-bd mb-10">
           <p>
-            Le harcelement, un rejet de l'autre et de ces différences, déversant une aversion sur celui qui attise ma
+            Le harcèlement, un rejet de l'autre et de ces différences, déversant une aversion sur celui qui attise ma
             curiosité. Dans cette bande dessinée, je dénonce le harcèlement et ses retombées psychologiques sur ses victimes
             et sur son entourage. De plus, je m'intéresse aux processus qui amènent le harceleur à agir et à la prise de
             conscience qui s'ensuit.

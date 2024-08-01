@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
 body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -36,11 +25,6 @@ body {
   transition: right 0.3s ease;
   z-index: 1000;
   padding: 20px;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
 }
 
 .sidebar nav ul li {
