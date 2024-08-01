@@ -38,9 +38,9 @@ export default function Home() {
   return (
     <>
       <Header imageSrc="/assets/character.png" alt="Artaoréa" link="https://instagram.com/artaorea" />
-      <section className="arts-col" id="works">
-        <div className="art-container mere-nature-container">
-          <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature" />
+      <section className="m-[10vh_10vw] text-center flex flex-col items-center gap-[20vh] arts-col" id="works">
+        <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container mere-nature-container">
+          <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
             <div className="art-header mere-nature-header">
               <h1>Mère Nature</h1>
@@ -59,8 +59,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="art-container arbre-container">
-          <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre" />
+        <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container arbre-container">
+          <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
             <div className="art-header arbre-header">
               <h1>L'arbre</h1>
@@ -77,8 +77,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="art-container fuite-container">
-          <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite" />
+        <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container fuite-container">
+          <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
             <div className="art-header fuite-header">
               <h1>Fuite du temps</h1>
@@ -108,14 +108,14 @@ export default function Home() {
           </p>
         </div>
         <div className="art-apparence-showing">
-          <img src="/assets/works/apparence-1.jpeg" alt="Apparence 1" className="apparence-1" />
-          <img src="/assets/works/apparence-2.jpeg" alt="Apparence 2" className="apparence-2" />
-          <img src="/assets/works/apparence-3.jpeg" alt="Apparence 3" className="apparence-3" />
+          <img src="/assets/works/apparence-1.jpeg" alt="Apparence 1" className="apparence-1 h-[30vh] w-[20vw] object-cover" />
+          <img src="/assets/works/apparence-2.jpeg" alt="Apparence 2" className="apparence-2 h-[30vh] w-[20vw] object-cover" />
+          <img src="/assets/works/apparence-3.jpeg" alt="Apparence 3" className="apparence-3 h-[30vh] w-[20vw] object-cover" />
         </div>
       </section>
-      <section className="arts-col">
-        <div className="art-container unknwon-header">
-          <img src="/assets/works/unknown.jpeg" alt="Unknown" className="unknown" />
+      <section className="m-[10vh_10vw] text-center flex flex-col items-center gap-[20vh] arts-col">
+        <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container unknwon-header">
+          <img src="/assets/works/unknown.jpeg" alt="Unknown" className="unknown h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
             <div className="art-header unknwon-header">
               <h1>Unknown</h1>
@@ -138,9 +138,9 @@ export default function Home() {
           <p>Technique: crayon de couleur</p>
         </div>
         <div className="art-bd-showing">
-          <img src="/assets/works/bd-1.jpeg" alt="bd 1" className="bd-1" />
-          <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2" />
-          <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3" />
+          <img src="/assets/works/bd-1.jpeg" alt="bd 1" className="bd-1 w-[20vw] h-[50vh]" />
+          <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2 w-[20vw] h-[50vh]" />
+          <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3 w-[20vw] h-[50vh]" />
         </div>
         <div className="art-content art-content-bd mb-10">
           <p>
