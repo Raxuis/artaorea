@@ -6,7 +6,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Artaorea",
-  description: "My Portfolio",
+  description: "Mon Portfolio"
 };
 
 export default function RootLayout({
