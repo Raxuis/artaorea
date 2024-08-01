@@ -158,15 +158,3 @@ body {
 .art-content {
   font-size: 1.3rem;
 }
-
-.arts-apparence,
-.arts-bd {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.art-header {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-}

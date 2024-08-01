@@ -42,7 +42,7 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container mere-nature-container">
           <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header bg-cyan text-white mere-nature-header">
+            <div className="art-header bg-cyan text-white mere-nature-header w-full text-center p-5">
               <h1 className="mb-2 border-b border-white inline-flex">Mère Nature</h1>
               <p className="mb-1">1,20m</p>
               <p className="mb-1">Technique: modelage, collage, composition</p>
@@ -62,7 +62,7 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container arbre-container">
           <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header bg-cyan text-white arbre-header">
+            <div className="art-header bg-cyan text-white arbre-header w-full text-center p-5">
               <h1 className="mb-2 border-b border-white inline-flex">L'arbre</h1>
               <p className="mb-1">30 x 20 x 20 cm</p>
               <p className="mb-1">Technique: assemblage, fil de fer</p>
@@ -80,7 +80,7 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container fuite-container">
           <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header bg-cyan text-white fuite-header">
+            <div className="art-header bg-cyan text-white w-full text-center p-5 fuite-header">
               <h1 className="mb-2 border-b border-white inline-flex">Fuite du temps</h1>
               <p className="mb-1">20 x 25 x 10 cm</p>
               <p className="mb-1">Technique: modelage, peinture</p>
@@ -95,8 +95,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="arts-apparence">
-        <div className="art-header bg-cyan text-white">
+      <section className="arts-apparence flex flex-col items-center">
+        <div className="art-header bg-cyan text-white w-full text-center p-5">
           <h1 className="mb-2 border-b border-white inline-flex">L'apparence cachée</h1>
           <p className="mb-1">20 x 20 x 30 cm</p>
           <p className="mb-1">Technique: modelage, peinture</p>
@@ -114,10 +114,10 @@ export default function Home() {
         </div>
       </section>
       <section className="m-[10vh_10vw] text-center flex flex-col items-center gap-[20vh] arts-col">
-        <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container unknwon-header">
+        <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container">
           <img src="/assets/works/unknown.jpeg" alt="Unknown" className="unknown h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header bg-cyan text-white unknwon-header">
+            <div className="art-header bg-cyan text-white w-full text-center p-5 unknown-header">
               <h1 className="mb-2 border-b border-white inline-flex">Unknown</h1>
               <p className="mb-1">Dimensions inconnues</p>
               <p className="mb-1">Technique: inconnue</p>
@@ -131,8 +131,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="arts-bd">
-        <div className="art-header bg-cyan text-white">
+      <section className="arts-bd flex flex-col items-center">
+        <div className="art-header bg-cyan text-white w-full text-center p-5">
           <h1 className="mb-2 border-b border-white inline-flex">Page de BD</h1>
           <p className="mb-1">25 x 35 cm</p>
           <p className="mb-1">Technique: crayon de couleur</p>
