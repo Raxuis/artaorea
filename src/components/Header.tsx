@@ -4,21 +4,24 @@ import BurgerMenu from './BurgerMenu'
 type HeaderProps = {
   children?: React.ReactNode,
   imageSrc?: string,
+  link?: string,
   alt?: string
 }
 
-const Header = ({ children, imageSrc, alt }: HeaderProps) => {
-  return (
-    <div className="header">
-      <Bubbles />
-      {imageSrc ? <div className="character-container">
-        <img src={imageSrc} alt={alt} className="character" />
-      </div> : null}
-      {children}
-      <BurgerMenu />
-    </div>
-  )
+const handleClick = ({ link }: { link?: string }) => () => {
+  window.open(link, '_blank');
 }
+
+const Header = ({ children, imageSrc, link, alt }: HeaderProps) => (
+  <div className="header">
+    <Bubbles />
+    {imageSrc ? <div className="character-container">
+      <img src={imageSrc} alt={alt} className="character" onClick={link ? handleClick({ link }) : undefined} />
+    </div> : null}
+    {children}
+    <BurgerMenu />
+  </div>
+)
 
 const Bubbles = () => {
   return (

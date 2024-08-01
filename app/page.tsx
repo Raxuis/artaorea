@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <Header imageSrc="/assets/character.png" alt="Artaoréa" />
+      <Header imageSrc="/assets/character.png" alt="Artaoréa" link="https://instagram.com/artaorea" />
       <section className="arts-col" id="works">
         <div className="art-container mere-nature-container">
           <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature" />
