@@ -42,10 +42,10 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container mere-nature-container">
           <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header mere-nature-header">
-              <h1>Mère Nature</h1>
-              <p>1,20m</p>
-              <p>Technique: modelage, collage, composition</p>
+            <div className="art-header bg-cyan text-white mere-nature-header">
+              <h1 className="mb-2 border-b border-white inline-flex">Mère Nature</h1>
+              <p className="mb-1">1,20m</p>
+              <p className="mb-1">Technique: modelage, collage, composition</p>
             </div>
             <div className="art-content">
               <p>
@@ -62,10 +62,10 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container arbre-container">
           <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header arbre-header">
-              <h1>L'arbre</h1>
-              <p>30 x 20 x 20 cm</p>
-              <p>Technique: assemblage, fil de fer</p>
+            <div className="art-header bg-cyan text-white arbre-header">
+              <h1 className="mb-2 border-b border-white inline-flex">L'arbre</h1>
+              <p className="mb-1">30 x 20 x 20 cm</p>
+              <p className="mb-1">Technique: assemblage, fil de fer</p>
             </div>
             <div className="art-content">
               <p>
@@ -80,10 +80,10 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container fuite-container">
           <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header fuite-header">
-              <h1>Fuite du temps</h1>
-              <p>20 x 25 x 10 cm</p>
-              <p>Technique: modelage, peinture</p>
+            <div className="art-header bg-cyan text-white fuite-header">
+              <h1 className="mb-2 border-b border-white inline-flex">Fuite du temps</h1>
+              <p className="mb-1">20 x 25 x 10 cm</p>
+              <p className="mb-1">Technique: modelage, peinture</p>
             </div>
             <div className="art-content">
               <p>
@@ -96,10 +96,10 @@ export default function Home() {
         </div>
       </section>
       <section className="arts-apparence">
-        <div className="art-header">
-          <h1>L'apparence cachée</h1>
-          <p>20 x 20 x 30 cm</p>
-          <p>Technique: modelage, peinture</p>
+        <div className="art-header bg-cyan text-white">
+          <h1 className="mb-2 border-b border-white inline-flex">L'apparence cachée</h1>
+          <p className="mb-1">20 x 20 x 30 cm</p>
+          <p className="mb-1">Technique: modelage, peinture</p>
         </div>
         <div className="art-content art-content-apparence">
           <p>
@@ -117,10 +117,10 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_3fr] gap-[10vw] art-container unknwon-header">
           <img src="/assets/works/unknown.jpeg" alt="Unknown" className="unknown h-[500px] w-[400px] object-cover rounded-lg" />
           <div className="art-text">
-            <div className="art-header unknwon-header">
-              <h1>Unknown</h1>
-              <p>Dimensions inconnues</p>
-              <p>Technique: inconnue</p>
+            <div className="art-header bg-cyan text-white unknwon-header">
+              <h1 className="mb-2 border-b border-white inline-flex">Unknown</h1>
+              <p className="mb-1">Dimensions inconnues</p>
+              <p className="mb-1">Technique: inconnue</p>
             </div>
             <div className="art-content">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae natus deleniti perferendis ratione laborum
@@ -132,10 +132,10 @@ export default function Home() {
         </div>
       </section>
       <section className="arts-bd">
-        <div className="art-header">
-          <h1>Page de BD</h1>
-          <p>25 x 35 cm</p>
-          <p>Technique: crayon de couleur</p>
+        <div className="art-header bg-cyan text-white">
+          <h1 className="mb-2 border-b border-white inline-flex">Page de BD</h1>
+          <p className="mb-1">25 x 35 cm</p>
+          <p className="mb-1">Technique: crayon de couleur</p>
         </div>
         <div className="art-bd-showing">
           <img src="/assets/works/bd-1.jpeg" alt="bd 1" className="bd-1 w-[20vw] h-[50vh]" />

@@ -160,18 +160,6 @@ body {
   color: white;
 }
 
-.arts-col h1,
-.arts-apparence h1,
-.art-bd h1 {
-  margin-bottom: 8px;
-  border-bottom: 1px solid #fff;
-  display: inline-flex;
-}
-
-.art-header p {
-  margin-bottom: 5px;
-}
-
 .art-content {
   font-size: 1.3rem;
 }
