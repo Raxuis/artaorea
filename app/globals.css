@@ -155,11 +155,6 @@ body {
   padding: 20px;
 }
 
-.art-header {
-  background-color: #42a8b4;
-  color: white;
-}
-
 .art-content {
   font-size: 1.3rem;
 }
@@ -174,24 +169,4 @@ body {
   width: 100%;
   text-align: center;
   padding: 20px;
-}
-
-.art-content-apparence,
-.art-content-bd {
-  padding: 20px;
-}
-.art-apparence-showing,
-.art-bd-showing {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.art-apparence-showing {
-  gap: 20px;
-}
-
-.art-bd-showing {
-  gap: 40px;
-  margin-top: 20px;
 }

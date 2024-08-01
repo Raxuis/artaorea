@@ -101,13 +101,13 @@ export default function Home() {
           <p className="mb-1">20 x 20 x 30 cm</p>
           <p className="mb-1">Technique: modelage, peinture</p>
         </div>
-        <div className="art-content art-content-apparence">
+        <div className="art-content art-content-apparence p-5">
           <p>
             Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que son essence
             est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous amenant vers la mort.
           </p>
         </div>
-        <div className="art-apparence-showing">
+        <div className="art-apparence-showing grid grid-cols-3 items-center gap-5">
           <img src="/assets/works/apparence-1.jpeg" alt="Apparence 1" className="apparence-1 h-[30vh] w-[20vw] object-cover" />
           <img src="/assets/works/apparence-2.jpeg" alt="Apparence 2" className="apparence-2 h-[30vh] w-[20vw] object-cover" />
           <img src="/assets/works/apparence-3.jpeg" alt="Apparence 3" className="apparence-3 h-[30vh] w-[20vw] object-cover" />
@@ -137,12 +137,12 @@ export default function Home() {
           <p className="mb-1">25 x 35 cm</p>
           <p className="mb-1">Technique: crayon de couleur</p>
         </div>
-        <div className="art-bd-showing">
+        <div className="art-bd-showing grid grid-cols-3 items-center mt-5 gap-10">
           <img src="/assets/works/bd-1.jpeg" alt="bd 1" className="bd-1 w-[20vw] h-[50vh]" />
           <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2 w-[20vw] h-[50vh]" />
           <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3 w-[20vw] h-[50vh]" />
         </div>
-        <div className="art-content art-content-bd mb-10">
+        <div className="art-content art-content-bd mb-10 p-5">
           <p>
             Le harcèlement, un rejet de l'autre et de ces différences, déversant une aversion sur celui qui attise ma
             curiosité. Dans cette bande dessinée, je dénonce le harcèlement et ses retombées psychologiques sur ses victimes
