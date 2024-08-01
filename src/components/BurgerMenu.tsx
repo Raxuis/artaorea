@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation'
+import Link from "next/link";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,12 +45,19 @@ const BurgerMenu = () => {
           <ul>
             {
               pathname === '/about-me' ?
-                <li><a href="/">Accueil</a></li>
-                :
                 <>
-                  <li> <a href="/about-me">À propos de moi</a></li>
-                  <li><a href="#works">Mes oeuvres</a></li>
+                  <li><Link href="/">Accueil</Link></li>
+                  <li><Link href="/contact">Me contacter</Link></li>
                 </>
+                : pathname === '/contact' ?
+                  <>
+                    <li><Link href="/">Accueil</Link></li>
+                    <li><Link href="/about-me">À propos de moi</Link></li>
+                  </>
+                  : <>
+                    <li><Link href="/about-me">À propos de moi</Link></li>
+                    <li><Link href="/contact">Me contacter</Link></li>
+                  </>
             }
           </ul>
         </nav>
