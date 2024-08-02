@@ -116,18 +116,19 @@ export default function Home() {
       </section>
       <section className="m-[10vh_10vw] text-center flex flex-col items-center gap-[20vh] arts-col">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container">
-          <img src="/assets/works/unknown.jpeg" alt="Unknown" className="unknown h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
+          <img src="/assets/works/esclave-du-temps.jpeg" alt="Esclave du temps" className="h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
           <div className="art-text">
-            <div className="art-header bg-cyan text-white w-full text-center p-5 unknown-header space-y-1">
-              <h1 className="border-b border-white inline-flex">Unknown</h1>
-              <p>Dimensions inconnues</p>
-              <p>Technique: inconnue</p>
+            <div className="art-header bg-cyan text-white w-full text-center p-5 space-y-1">
+              <h1 className="border-b border-white inline-flex">Esclave du temps</h1>
+              <p>30 x 20 x 10 cm</p>
+              <p>Technique: modelage, peinture</p>
             </div>
             <div className="art-content text-lg xl:text-xl mt-2">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae natus deleniti perferendis ratione laborum
-                asperiores modi! Totam veniam minus quod nemo voluptatum consequuntur sunt reiciendis quos optio distinctio
-                corrupti qui voluptas earum porro officiis dolore, necessitatibus aut, natus aspernatur. Similique quos
-                quibusdam est maiores, at ad molestias aspernatur libero minima.</p>
+              <p>
+                L'homme est doublement temporel, il l'éprouve physiquement par les changements qu'il imprime sur lui et il l'éprouve mentalement par la perte d'être cher,
+                nous rappelant à chaque fois notre fin proche. Incapable de vivre l'instant présent,
+                l'homme est prisonnier d'un passé auquel s'attache sa mémoire et un avenir auquel son imagination se lie.
+              </p>
             </div>
           </div>
         </div>
