@@ -18,6 +18,11 @@ const AboutMe = () => {
     requestAnimationFrame(raf);
   }, []);
 
+  const scrollToAboutMe = () => {
+    const aboutMe = document.getElementById("about-me");
+    aboutMe?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <Header>
@@ -27,10 +32,10 @@ const AboutMe = () => {
             <p>19 ans</p>
             <p>Rambouillet, France</p>
           </div>
-          <div className="mouse-scroll" />
+          <div className="mouse-scroll" onClick={() => scrollToAboutMe()} />
         </div>
       </Header>
-      <div className="flex flex-col mx-auto w-full max-w-screen-lg space-y-5 mb-20 justify-center">
+      <div className="flex flex-col mx-auto w-full max-w-screen-lg space-y-5 mb-20 justify-center" id="about-me">
         <StudiesTimeline />
         <p className="text-xl max-sm:text-center">Mes centres d'intérêts</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 place-items-center mt-5">
