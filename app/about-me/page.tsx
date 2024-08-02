@@ -1,7 +1,6 @@
 "use client";
 
-import BurgerMenu from '@/src/components/BurgerMenu'
-import Header from '@/src/components/Header';
+import Header from '@/components/Header';
 import Lenis from 'lenis'
 import React, { useEffect } from 'react'
 
