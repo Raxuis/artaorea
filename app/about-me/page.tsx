@@ -1,6 +1,7 @@
 "use client";
 
 import Header from '@/components/Header';
+import StudiesTimeline from '@/components/TimeLine';
 import Lenis from 'lenis'
 import React, { useEffect } from 'react'
 
@@ -18,16 +19,21 @@ const AboutMe = () => {
   }, [])
 
   return (
-    <Header>
-      <div className='flex flex-col justify-center items-center h-full'>
-        <div className="flex flex-col">
-          <h1>Auréa Close</h1>
-          <p>19 ans</p>
-          <p>Rambouillet, France</p>
+    <>
+      <Header>
+        <div className='flex flex-col justify-center items-center h-full'>
+          <div className="flex flex-col">
+            <h1>Auréa Close</h1>
+            <p>19 ans</p>
+            <p>Rambouillet, France</p>
+          </div>
+          <div className='mouse-scroll' />
         </div>
-        <div className='mouse-scroll' />
+      </Header>
+      <div className='flex flex-col mx-auto w-full max-w-screen-lg'>
+        <StudiesTimeline />
       </div>
-    </Header>
+    </>
   )
 }
 
