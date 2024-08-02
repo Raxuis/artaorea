@@ -5,6 +5,8 @@ import Lenis from "lenis";
 import Header from "@/components/Header";
 import StudiesTimeline from "@/components/TimeLine";
 import Image from "next/image";
+import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+
 
 const AboutMe = () => {
 
@@ -28,12 +30,20 @@ const AboutMe = () => {
     <>
       <Header>
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="flex justify-center items-center gap-20 max-sm:flex-col">
+          <div className="flex justify-center sm:items-center gap-10 sm:gap-20 max-sm:flex-col">
             <Image src="/assets/aurea-profile.png" width={200} height={200} alt="Auréa Close" />
             <div className="flex flex-col description">
               <h1>Auréa Close</h1>
               <p>19 ans</p>
               <p>Rambouillet, France</p>
+              <div className="flex gap-2 mt-1">
+                <a href="https://www.instagram.com/artaorea/" target="_blank" rel="noreferrer">
+                  <InstagramLogoIcon className="size-5 text-black hover:text-blue-600 duration-300" />
+                </a>
+                <a href="https://www.linkedin.com/artaorea/" target="_blank" rel="noreferrer">
+                  <LinkedInLogoIcon className="size-5 text-black hover:text-blue-600 duration-300" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="mouse-scroll" onClick={() => scrollToAboutMe()} />
