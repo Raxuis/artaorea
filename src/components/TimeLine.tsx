@@ -13,10 +13,10 @@ const StudiesTimeline = () => {
   };
 
   return (
-    <div className='my-20'>
+    <div className='my-24'>
       <Timeline lang="en" theme={customTheme} dateFormat="only-number" collapse withoutDay>
         <Events
-          title="Baccalauréat spécialités SVT et HGGSP"
+          title="Baccalauréat spécialités SVT et HGGSP (Option Arts Plastiques)"
           subtitle='Lycée Sainte Thérèse, Rambouillet - Mention Bien'
           startDate="2022/09"
           endDate="2023/06"
@@ -24,8 +24,9 @@ const StudiesTimeline = () => {
           <Event
             title="Plus d'informations"
             description={[
-              "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-              'Is simply dummy text of the printing and typesetting industry.',
+              'Développement de connaissances sur la culture scientifique (biologie, étude de phénomènes naturels, géologie) politique et géopolitique. Apprenant rigueur et organisation.',
+              "En cours d'art, nous travaillons sur toute de technique tel que : peinture, gravure, dessin...",
+              "Chez moi, j'approfondis et reprend se qu'on apprend en cour afin de mieux assimile ces savoirs. Je m'intéresse également beaucoup aux technique de travaille en volume non aborder en cours (modelage, maquette ...)"
             ]}
           />
         </Events>
@@ -41,8 +42,9 @@ const StudiesTimeline = () => {
           <Event
             title="Plus d'informations"
             description={[
-              "Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
-              'Is simply dummy text of the printing and typesetting industry.',
+              "Approche expérimentale et personnelle de production liée à l'objet et à l'espace contemporains.",
+              'Conception et création de mosaïques décoratives composées avec divers matériaux (verre, les émaux, la céramique, les pierres, ou encore le béton...)',
+              "Expérimentation et apprentissage du dessin, de la couleur et du volume."
             ]}
           />
         </Events>
