@@ -33,11 +33,11 @@ const Contact = () => {
     setIsLoading(true);
     sendEmail(values)
       .then((response) => {
-        toast.success('Email sent successfully!');
+        toast.success('Email envoyé avec succès!');
         setIsLoading(false);
       })
       .catch((error) => {
-        toast.error('Failed to send email.');
+        toast.error('Échec lors de l\'envoi de l\'email.');
         setIsLoading(false);
       });
   }
@@ -61,7 +61,7 @@ const Contact = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Votre nom</FormLabel>
                 <FormControl>
                   <Input placeholder="John Doe" {...field} />
                 </FormControl>
@@ -74,7 +74,7 @@ const Contact = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Votre email</FormLabel>
                 <FormControl>
                   <Input placeholder="john.doe@example.com" {...field} />
                 </FormControl>
@@ -87,15 +87,15 @@ const Contact = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>Votre message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Want to work with me?" {...field} />
+                  <Textarea placeholder="Vous souhaitez travailler avec moi?" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">{isLoading ? <Loader2 className="animate-spin" /> : "Submit"}</Button>
+          <Button type="submit">{isLoading ? <Loader2 className="animate-spin" /> : "Envoyer"}</Button>
         </form>
       </Form>
     </Header>
