@@ -19,10 +19,13 @@ const AboutMe = () => {
 
   return (
     <Header>
-      <div className="about-me-container">
-        <h1>Auréa Close</h1>
-        <p>19 ans</p>
-        <p>Rambouillet, France</p>
+      <div className='flex flex-col justify-center items-center h-full'>
+        <div className="flex flex-col">
+          <h1>Auréa Close</h1>
+          <p>19 ans</p>
+          <p>Rambouillet, France</p>
+        </div>
+        <div className='mouse-scroll' />
       </div>
     </Header>
   )
