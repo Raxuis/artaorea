@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'shape-1': 'url("/assets/icons/shape-1.png")',
+        'shape-2': 'url("/assets/icons/shape-2.png")'
+      },
       colors: {
         "cyan": "#42a8b4",
         border: "hsl(var(--border))",
