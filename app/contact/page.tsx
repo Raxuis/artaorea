@@ -12,6 +12,8 @@ import { Input } from '@/components/ui/input';
 import { ContactSchema } from '@/utils/validation';
 import { Textarea } from '@/components/ui/textarea';
 import { Loader2 } from 'lucide-react';
+import { sendEmail } from '@/utils/sendEmail';
+import { toast } from "sonner";
 
 
 const Contact = () => {
@@ -21,6 +23,7 @@ const Contact = () => {
   const form = useForm<z.infer<typeof ContactSchema>>({
     resolver: zodResolver(ContactSchema),
     defaultValues: {
+      name: "",
       email: "",
       message: "",
     },
@@ -28,10 +31,15 @@ const Contact = () => {
 
   function onSubmit(values: z.infer<typeof ContactSchema>) {
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    console.log(values)
+    sendEmail(values)
+      .then((response) => {
+        toast.success('Email sent successfully!');
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        toast.error('Failed to send email.');
+        setIsLoading(false);
+      });
   }
 
   useEffect(() => {
@@ -48,6 +56,19 @@ const Contact = () => {
     <Header>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-md">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="John Doe" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="email"
