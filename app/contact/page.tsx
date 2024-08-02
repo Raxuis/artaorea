@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <Header>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full max-w-md">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-md">
           <FormField
             control={form.control}
             name="email"
