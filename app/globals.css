@@ -251,6 +251,10 @@
   animation-fill-mode: forwards;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @keyframes scroll {
   0% {
     bottom: 80%;
