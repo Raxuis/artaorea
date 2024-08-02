@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <div className="art-content text-lg xl:text-xl mt-2">
               <p>
-                Cette femme, inspirer de l'allégorie de la nature, représenter l'origine de la terre et de tout ce qui la
+                Cette femme, inspirée de l'allégorie de la nature, représente l'origine de la terre et de tout ce qui la
                 compose. Elle est la source de la vie et l'incarne sous la forme de la mère. Cette image de la femme
                 symbolise notre Terre et est vénérée dans diverses cultures, et représentée à travers les arts. Elle reflète
                 la déesse de la culture, la mère de toutes choses qui donne la vie, qui en son sein nourrit les plantes, les

@@ -25,8 +25,8 @@ const StudiesTimeline = () => {
             title="Plus d'informations"
             description={[
               'Développement de connaissances sur la culture scientifique (biologie, étude de phénomènes naturels, géologie) politique et géopolitique. Apprenant rigueur et organisation.',
-              "En cours d'art, nous travaillons sur toute de technique tel que : peinture, gravure, dessin...",
-              "Chez moi, j'approfondis et reprend se qu'on apprend en cour afin de mieux assimile ces savoirs. Je m'intéresse également beaucoup aux technique de travaille en volume non aborder en cours (modelage, maquette ...)"
+              "En cours d'art, nous travaillons sur tout de technique tel que : peinture, gravure, dessin...",
+              "Chez moi, j'approfondis et reprends se qu'on apprend en cours afin de mieux assimiler ces savoirs. Je m'intéresse également beaucoup aux techniques de travail en volume non abordées en cours (modelage, maquette ...)"
             ]}
           />
         </Events>
