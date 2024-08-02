@@ -59,7 +59,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container arbre-container">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container arbre-container max-sm:m-5">
           <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
           <div className="art-text">
             <div className="art-header bg-cyan text-white arbre-header w-full text-center p-5 space-y-1">
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container fuite-container">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container fuite-container max-sm:m-5">
           <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
           <div className="art-text">
             <div className="art-header bg-cyan text-white w-full text-center p-5 fuite-header space-y-1">
@@ -143,7 +143,7 @@ export default function Home() {
           <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
           <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
         </div>
-        <div className="art-content art-content-bd text-lg xl:text-xl mt-2">
+        <div className="art-content art-content-bd text-lg xl:text-xl mt-2 text-center">
           <p>
             Le harcèlement, un rejet de l'autre et de ces différences, déversant une aversion sur celui qui attise ma
             curiosité. Dans cette bande dessinée, je dénonce le harcèlement et ses retombées psychologiques sur ses victimes
