@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Lenis from "lenis";
 import Header from "@/components/Header";
 import StudiesTimeline from "@/components/TimeLine";
+import Image from "next/image";
 
 const AboutMe = () => {
 
@@ -27,10 +28,13 @@ const AboutMe = () => {
     <>
       <Header>
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="flex flex-col">
-            <h1>Auréa Close</h1>
-            <p>19 ans</p>
-            <p>Rambouillet, France</p>
+          <div className="flex justify-center items-center gap-20 max-sm:flex-col">
+            <Image src="/assets/aurea-profile.png" width={200} height={200} alt="Auréa Close" />
+            <div className="flex flex-col description">
+              <h1>Auréa Close</h1>
+              <p>19 ans</p>
+              <p>Rambouillet, France</p>
+            </div>
           </div>
           <div className="mouse-scroll" onClick={() => scrollToAboutMe()} />
         </div>

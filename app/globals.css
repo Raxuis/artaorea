@@ -246,6 +246,11 @@
   animation: scroll 2.5s infinite;
 }
 
+.description {
+  animation: reveal-description 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 @keyframes scroll {
   0% {
     bottom: 80%;
@@ -254,5 +259,17 @@
   100% {
     bottom: 20%;
     opacity: 0;
+  }
+}
+
+@keyframes reveal-description {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
