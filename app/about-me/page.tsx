@@ -5,7 +5,10 @@ import Lenis from "lenis";
 import Header from "@/components/Header";
 import StudiesTimeline from "@/components/TimeLine";
 import Image from "next/image";
-import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+// import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { scrollToAboutMe } from "@/utils/navigation";
 
 
 const AboutMe = () => {
@@ -21,11 +24,6 @@ const AboutMe = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  const scrollToAboutMe = () => {
-    const aboutMe = document.getElementById("about-me");
-    aboutMe?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <>
       <Header>
@@ -36,14 +34,15 @@ const AboutMe = () => {
               <h1>Auréa Close</h1>
               <p>19 ans</p>
               <p>Rambouillet, France</p>
-              <div className="flex gap-2 mt-1">
-                <a href="https://www.instagram.com/artaorea/" target="_blank" rel="noreferrer">
-                  <InstagramLogoIcon className="size-5 text-black hover:text-blue-600 duration-300" />
+              <Button variant="link" asChild className="p-0 text-md font-normal">
+                <a
+                  href="https://ensaama.net/site/home/formations/dnmade"
+                  target="_blank"
+                  rel="noreferrer">
+                  Étudiante en école d'art appliqué
+                  <ArrowTopRightIcon className="ml-1 text-black stroke-1 size-4" />
                 </a>
-                <a href="https://www.linkedin.com/artaorea/" target="_blank" rel="noreferrer">
-                  <LinkedInLogoIcon className="size-5 text-black hover:text-blue-600 duration-300" />
-                </a>
-              </div>
+              </Button>
             </div>
           </div>
           <div className="mouse-scroll" onClick={() => scrollToAboutMe()} />

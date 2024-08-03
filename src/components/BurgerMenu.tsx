@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation'
 import Link from "next/link";
+import { scrollToAboutMe, scrollToWorks } from "@/utils/navigation";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,17 +26,6 @@ const BurgerMenu = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen]);
-
-  const scrollToWorks = () => {
-    const works = document.getElementById("works");
-    works?.scrollIntoView({ behavior: "smooth" });
-  };
-
-
-  const scrollToAboutMe = () => {
-    const timeline = document.getElementById("about-me");
-    timeline?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <>
