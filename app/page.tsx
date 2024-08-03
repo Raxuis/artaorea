@@ -1,3 +1,4 @@
+// pages/index.js
 "use client";
 
 import Lenis from "lenis";
@@ -6,6 +7,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import animations from "@/utils/animations";
 import Header from "@/components/Header";
+import HorizontalDisplay from "@/components/HorizontalDisplay";
+import works from "@/constants/works";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,61 +42,9 @@ export default function Home() {
     <>
       <Header imageSrc="/assets/character.png" alt="Artaoréa" link="https://instagram.com/artaorea" />
       <section className="m-[5vh_5vw] sm:m-[10vh_10vw] text-center flex flex-col items-center gap-[25vh] arts-col" id="works">
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container mere-nature-container max-sm:m-5">
-          <img src="/assets/works/mere-nature.jpeg" alt="Mere Nature" className="mere-nature h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
-          <div className="art-text">
-            <div className="art-header bg-cyan text-white mere-nature-header w-full text-center p-3 sm:p-5 space-y-1">
-              <h1 className="border-b border-white inline-flex">Mère Nature</h1>
-              <p>1,20m</p>
-              <p>Technique: modelage, collage, composition</p>
-            </div>
-            <div className="art-content text-lg xl:text-xl mt-2">
-              <p>
-                Cette femme, inspirée de l'allégorie de la nature, représente l'origine de la terre et de tout ce qui la
-                compose. Elle est la source de la vie et l'incarne sous la forme de la mère. Cette image de la femme
-                symbolise notre Terre et est vénérée dans diverses cultures, et représentée à travers les arts. Elle reflète
-                la déesse de la culture, la mère de toutes choses qui donne la vie, qui en son sein nourrit les plantes, les
-                animaux et les hommes. C'est en élevant son pouvoir nourricier qu'elle engendre les montagnes, rivières, elle
-                est à la source des êtres vivants, des végétaux, des minéraux.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container arbre-container max-sm:m-5">
-          <img src="/assets/works/arbre.jpeg" alt="Arbre" className="arbre h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
-          <div className="art-text">
-            <div className="art-header bg-cyan text-white arbre-header w-full text-center p-5 space-y-1">
-              <h1 className="border-b border-white inline-flex">L'arbre</h1>
-              <p>30 x 20 x 20 cm</p>
-              <p>Technique: assemblage, fil de fer</p>
-            </div>
-            <div className="art-content text-lg xl:text-xl mt-2">
-              <p>
-                La nature, un paradis lointain, une terre dévastatrice dont l'homme est dépendant bien qu'il se convainc du
-                contraire. J'ai voulu représenter dans cette composition l'alliage complexe qui lie l'homme et la nature.
-                L'homme transforme la nature, la modifie à coup d'outils et de matériaux, mais la nature compose l'homme et
-                lui fournit les ressources nécessaires à la vie.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container fuite-container max-sm:m-5">
-          <img src="/assets/works/fuite-du-temps.jpeg" alt="Fuite du temps" className="fuite h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
-          <div className="art-text">
-            <div className="art-header bg-cyan text-white w-full text-center p-5 fuite-header space-y-1">
-              <h1 className="border-b border-white inline-flex">Fuite du temps</h1>
-              <p>20 x 25 x 10 cm</p>
-              <p>Technique: modelage, peinture</p>
-            </div>
-            <div className="art-content text-lg xl:text-xl mt-2">
-              <p>
-                Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que son
-                essence est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous amenant vers
-                la mort.
-              </p>
-            </div>
-          </div>
-        </div>
+        {works.slice(0, 3).map((work, index) => (
+          <HorizontalDisplay key={index} {...work} />
+        ))}
       </section>
       <section className="arts-apparence flex flex-col items-center">
         <div className="art-header bg-cyan text-white w-full text-center p-5 space-y-1">
@@ -102,7 +53,6 @@ export default function Home() {
           <p>Technique: modelage, peinture</p>
         </div>
         <div className="art-content art-content-apparence text-center text-lg xl:text-xl my-2">
-
           <p>
             Le temps s'écoule, de l'enfant à un âge avancé en un clin d'œil, le temps me rappelle chaque jour que son essence
             est de défiler sur nous en y laissant les traces de son passage, nous déformant et nous amenant vers la mort.
@@ -115,23 +65,7 @@ export default function Home() {
         </div>
       </section>
       <section className="m-[10vh_10vw] text-center flex flex-col items-center gap-[20vh] arts-col">
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] xl:grid-cols-[1fr_3fr] gap-[15vw] sm:gap-[10vw] art-container">
-          <img src="/assets/works/esclave-du-temps.jpeg" alt="Esclave du temps" className="h-[500px] w-[400px] object-cover rounded-lg mx-auto" />
-          <div className="art-text">
-            <div className="art-header bg-cyan text-white w-full text-center p-5 space-y-1">
-              <h1 className="border-b border-white inline-flex">Esclave du temps</h1>
-              <p>30 x 20 x 10 cm</p>
-              <p>Technique: modelage, peinture</p>
-            </div>
-            <div className="art-content text-lg xl:text-xl mt-2">
-              <p>
-                L'homme est doublement temporel, il l'éprouve physiquement par les changements qu'il imprime sur lui et il l'éprouve mentalement par la perte d'être cher,
-                nous rappelant à chaque fois notre fin proche. Incapable de vivre l'instant présent,
-                l'homme est prisonnier d'un passé auquel s'attache sa mémoire et un avenir auquel son imagination se lie.
-              </p>
-            </div>
-          </div>
-        </div>
+        <HorizontalDisplay {...works[3]} />
       </section>
       <section className="arts-bd flex flex-col items-center">
         <div className="art-header bg-cyan text-white w-full text-center p-5 space-y-1">
