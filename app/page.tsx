@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <Header imageSrc="/assets/character.png" alt="Artaoréa" link="https://instagram.com/artaorea" />
+      <Header imageSrc="/assets/character.png" alt="Artaoréa" link="https://instagram.com/art_aorea" />
       <section className="m-[5vh_5vw] sm:m-[10vh_10vw] text-center flex flex-col items-center gap-[25vh] arts-col" id="works">
         {works.slice(0, 3).map((work, index) => (
           <HorizontalDisplay key={index} {...work} />
