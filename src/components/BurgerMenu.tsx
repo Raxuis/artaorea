@@ -57,8 +57,8 @@ const BurgerMenu = () => {
             {
               pathname === '/about-me' ?
                 <>
-                  <li><Link href="/">Accueil</Link></li>
                   <li><a className="cursor-pointer" onClick={() => scrollToAboutMe()}>Mon parcours</a></li>
+                  <li><Link href="/">Accueil</Link></li>
                   <li><Link href="/contact">Me contacter</Link></li>
                 </>
                 : pathname === '/contact' ?
@@ -67,8 +67,8 @@ const BurgerMenu = () => {
                     <li><Link href="/about-me">À propos de moi</Link></li>
                   </>
                   : <>
-                    <li><Link href="/about-me">À propos de moi</Link></li>
                     <li><a className="cursor-pointer" onClick={() => scrollToWorks()}>Mes oeuvres</a></li>
+                    <li><Link href="/about-me">À propos de moi</Link></li>
                     <li><Link href="/contact">Me contacter</Link></li>
                   </>
             }
