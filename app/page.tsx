@@ -9,6 +9,8 @@ import animations from "@/utils/animations";
 import Header from "@/components/Header";
 import HorizontalDisplay from "@/components/HorizontalDisplay";
 import works from "@/constants/works";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,6 +88,9 @@ export default function Home() {
             conscience qui s'ensuit.
           </p>
         </div>
+        <Button variant="outline" className="mt-10" asChild>
+          <Link href="/works">Voir plus de mon travail</Link>
+        </Button>
       </section>
     </>
   );
