@@ -155,7 +155,7 @@ const Works = () => {
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>4</p>
           </div>
-          <p className='text-xl font-semibold'>Échantillonnage pour un projet au Perreux sur Marne</p>
+          <p className='text-xl font-semibold max-sm:max-w-xs'>Échantillonnage pour projet au Perreux-sur-Marne</p>
         </div>
         <div className='flex flex-col gap-5 my-10 ml-16'>
           <p>PORCHE: Rivière</p>
