@@ -1,7 +1,6 @@
 "use client";
 
 import Header from '@/components/Header'
-import HorizontalDisplay from '@/components/HorizontalDisplay';
 import Lenis from 'lenis';
 import React, { useEffect } from 'react'
 
@@ -119,6 +118,46 @@ const Works = () => {
             incarnant la résilience face aux flots changeants des cours d'eau japonais.
           </p>
         </div>
+      </section>
+      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
+        <div className='flex mt-10 gap-4 items-center'>
+          <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
+            <p className='text-xl font-semibold'>2</p>
+          </div>
+          <p className='text-xl font-semibold'>Les Vanités</p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] gap-[5vw] art-container pt-5">
+          <div className='flex flex-col gap-2'>
+            <img src='/assets/works/mosaique-square-2.jpeg' alt='Mosaïque' className='w-full object-cover' />
+            <p className='text-lg text-center'>Mosaïque en pose directe, (pierre et fausse pierre), 40x40cm.</p>
+          </div>
+          <p>Cette vanite présente un crâne composé d'un opus tessellatum de marbre blanc. J'ai réalisé des tesselles carrées sur le mur. puis, pour marquer la transition avec le fond
+            Le changement d'opus, ainsi que les différente épaisseur de matériaux apporte de la profondeur a la pièce et permet aussi de valoriser le crane.
+            symbole majeur de la restructuration pictural de la vanité.
+          </p>
+        </div>
+      </section>
+      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
+        <div className='flex mt-10 gap-4 items-center'>
+          <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
+            <p className='text-xl font-semibold'>3</p>
+          </div>
+          <p className='text-xl font-semibold'>Exploration de l'oeil et de la peau animale</p>
+        </div>
+        <div className="art-content art-content-apparence text-center text-lg xl:text-xl my-10">
+          <p>
+            Créer un contraste entre la peau et l'oeil par l'utilisation conjointe de la pose directe et inversée.
+          </p>
+        </div>
+        <div className='grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 place-items-center'>
+          <img src="/assets/works/exploration-1.jpeg" alt="Exploration 1" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
+          <img src="/assets/works/exploration-2.jpeg" alt="Exploration 2" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
+          <img src="/assets/works/exploration-3.jpeg" alt="Exploration 3" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
+          <img src="/assets/works/exploration-4.jpeg" alt="Exploration 4" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
+          <img src="/assets/works/exploration-5.jpeg" alt="Exploration 5" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
+          <img src="/assets/works/exploration-6.jpeg" alt="Exploration 6" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
+        </div>
+        <p className='text-lg text-center pt-5'>Échantillons 10 x 10 cm pour travailler différent opus sur la peau du gecko.</p>
       </section>
     </>
   )
