@@ -1,5 +1,6 @@
 "use client";
 
+import Container from '@/components/Container';
 import Header from '@/components/Header'
 import Lenis from 'lenis';
 import React, { useEffect } from 'react'
@@ -22,12 +23,12 @@ const Works = () => {
           <p className='text-3xl'>
             Bienvenue sur ma page de travail
           </p>
-          <p className='text-md'>
+          <p className='text-md text-center'>
             Ici, je vous montre mes différentes oeuvres en fonction de mon parcours professionnel.
           </p>
         </div>
       </Header>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
+      <Container>
         <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto">
           <h1 className="text-2xl">Céramique</h1>
         </div>
@@ -67,8 +68,6 @@ const Works = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
         <div className='flex mt-10 gap-4 items-center'>
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>2</p>
@@ -93,9 +92,7 @@ const Works = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
-        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto">
+        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto mt-10">
           <h1 className="text-2xl">Mosaïque</h1>
         </div>
         <div className='flex mt-10 gap-4 items-center'>
@@ -118,8 +115,6 @@ const Works = () => {
             incarnant la résilience face aux flots changeants des cours d'eau japonais.
           </p>
         </div>
-      </section>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
         <div className='flex mt-10 gap-4 items-center'>
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>2</p>
@@ -136,8 +131,6 @@ const Works = () => {
             symbole majeur de la restructuration pictural de la vanité.
           </p>
         </div>
-      </section>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
         <div className='flex mt-10 gap-4 items-center'>
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>3</p>
@@ -158,8 +151,6 @@ const Works = () => {
           <img src="/assets/works/exploration-6.jpeg" alt="Exploration 6" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
         </div>
         <p className='text-lg text-center pt-5'>Échantillons 10 x 10 cm pour travailler différent opus sur la peau du gecko.</p>
-      </section>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
         <div className='flex mt-10 gap-4 items-center'>
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>4</p>
@@ -205,8 +196,6 @@ const Works = () => {
             <p className='text-sm text-center'>30 x 20 cm</p>
           </div>
         </div>
-      </section>
-      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
         <div className='flex mt-10 gap-4 items-center'>
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>5</p>
@@ -214,7 +203,7 @@ const Works = () => {
           <p className='text-xl font-semibold'>PANNEAU COLOMBE</p>
         </div>
         <p className='text-lg text-center pt-5'>Travail collaboratif pour réaliser deux panneaux. Commande d'architecte pour un immeuble à Colombes.</p>
-        <p className='my-10'>PANNEAU: Barques</p>
+        <p className='my-10 font-semibold'>PANNEAU: Barques</p>
         <div className='flex flex-col space-y-5 sm:space-y-10 items-center'>
           <div className='grid grid-cols-1 sm:grid-cols-2 max-sm:pt-5 sm:my-10 gap-5 place-items-center'>
             <img src="/assets/works/panneau-colombe-1.jpeg" alt="Panneau Colombe 1" className='h-[30vh] w-[40vh]' />
@@ -234,7 +223,7 @@ const Works = () => {
             <img src="/assets/works/constellations-3.jpeg" alt="Constellations 3" className='px-8 sm:px-10 w-full sm:w-1/2' />
           </div>
         </div>
-      </section>
+      </Container>
     </>
   )
 }
