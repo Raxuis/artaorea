@@ -29,7 +29,7 @@ const Works = () => {
         </div>
       </Header>
       <Container>
-        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto">
+        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto" id='ceramique'>
           <h1 className="text-2xl">Céramique</h1>
         </div>
         <div className='flex mt-10 gap-4 items-center'>
@@ -92,7 +92,7 @@ const Works = () => {
             </div>
           </div>
         </div>
-        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto mt-10">
+        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto mt-10" id='mosaique'>
           <h1 className="text-2xl">Mosaïque</h1>
         </div>
         <div className='flex mt-10 gap-4 items-center'>

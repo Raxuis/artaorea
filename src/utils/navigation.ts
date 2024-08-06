@@ -3,7 +3,7 @@ export const scrollToAboutMe = () => {
   timeline?.scrollIntoView({ behavior: "smooth" });
 };
 
-export const scrollToWorks = () => {
-  const works = document.getElementById("works");
-  works?.scrollIntoView({ behavior: "smooth" });
-};
+export const scrollToTypeOfWork = (type: 'mosaique' | 'ceramique') => {
+  const typeEl = document.getElementById(type);
+  typeEl?.scrollIntoView({ behavior: "smooth" });
+}

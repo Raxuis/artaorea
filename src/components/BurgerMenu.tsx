@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation'
 import Link from "next/link";
-import { scrollToAboutMe, scrollToWorks } from "@/utils/navigation";
+import { scrollToAboutMe, scrollToTypeOfWork } from "@/utils/navigation";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,20 +47,29 @@ const BurgerMenu = () => {
             {
               pathname === '/about-me' ?
                 <>
-                  <li><a className="cursor-pointer" onClick={() => scrollToAboutMe()}>Mon parcours</a></li>
                   <li><Link href="/">Accueil</Link></li>
                   <li><Link href="/contact">Me contacter</Link></li>
+                  <li><a className="cursor-pointer" onClick={() => scrollToAboutMe()}>Mon parcours</a></li>
                 </>
                 : pathname === '/contact' ?
                   <>
                     <li><Link href="/">Accueil</Link></li>
                     <li><Link href="/about-me">À propos de moi</Link></li>
                   </>
-                  : <>
-                    <li><a className="cursor-pointer" onClick={() => scrollToWorks()}>Mes oeuvres</a></li>
-                    <li><Link href="/about-me">À propos de moi</Link></li>
-                    <li><Link href="/contact">Me contacter</Link></li>
-                  </>
+                  : pathname === '/' ?
+                    <>
+                      <li><Link href="/about-me">À propos de moi</Link></li>
+                      <li><Link href="/works">Mes travaux</Link></li>
+                      <li><Link href="/contact">Me contacter</Link></li>
+                    </>
+                    :
+                    <>
+                      <li><Link href="/">Accueil</Link></li>
+                      <li><Link href="/about-me">À propos de moi</Link></li>
+                      <li><Link href="/contact">Me contacter</Link></li>
+                      <li><a className="cursor-pointer" onClick={() => scrollToTypeOfWork('ceramique')}>Céramique</a></li>
+                      <li><a className="cursor-pointer" onClick={() => scrollToTypeOfWork('mosaique')}>Mosaïque</a></li>
+                    </>
             }
           </ul>
         </nav>
