@@ -95,6 +95,31 @@ const Works = () => {
           </div>
         </div>
       </section>
+      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
+        <div className="art-header bg-cyan text-white w-2/3 text-center p-5 mx-auto">
+          <h1 className="text-2xl">Mosaïque</h1>
+        </div>
+        <div className='flex mt-10 gap-4 items-center'>
+          <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
+            <p className='text-xl font-semibold'>1</p>
+          </div>
+          <p className='text-xl font-semibold'>Retranscrire du tissu</p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] gap-[5vw] art-container pt-5">
+          <div className='flex flex-col gap-2'>
+            <img src='/assets/works/mosaique-square.jpeg' alt='Mosaïque' className='w-full object-cover' />
+            <p className='text-lg text-center'>"Danse au creux des vagues". 2023, mosaïque en pose inversée, grès cérame, (verre float, pâte de verre Albertini, carreau industriel et béton) .
+              30x30cm.</p>
+          </div>
+          <p>Cette mosaïque transmet les mouvements
+            présente dans les tissus japonais.
+            La douceur du tissu japonais au motif seigaiha m'a inspiré.
+            empreint des oscillations délicates des manches de kimono tourbillonnant dans la danse du
+            Gagaku. Au cœur de ce flux, deux carpes koi dansent harmonieusement au creux des vagues.
+            incarnant la résilience face aux flots changeants des cours d'eau japonais.
+          </p>
+        </div>
+      </section>
     </>
   )
 }
