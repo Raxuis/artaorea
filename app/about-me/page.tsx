@@ -5,7 +5,6 @@ import Lenis from "lenis";
 import Header from "@/components/Header";
 import StudiesTimeline from "@/components/TimeLine";
 import Image from "next/image";
-// import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { scrollToAboutMe } from "@/utils/navigation";

@@ -3,10 +3,18 @@
 import Container from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import Header from '@/components/Header'
+import animations from '@/utils/animations';
 import Lenis from 'lenis';
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
+  const container = useRef();
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -16,6 +24,17 @@ const Works = () => {
     }
 
     requestAnimationFrame(raf);
+    animations.forEach(({ target, fromOptions, toOptions, options }) => {
+      if (fromOptions) {
+        gsap.from(target, fromOptions);
+      }
+      if (toOptions) {
+        gsap.to(target, toOptions);
+      }
+      if (options) {
+        gsap.to(target, options);
+      }
+    });
   }, []);
   return (
     <>
@@ -206,11 +225,11 @@ const Works = () => {
         <p className='text-lg text-center pt-5'>Travail collaboratif pour réaliser deux panneaux. Commande d'architecte pour un immeuble à Colombes.</p>
         <p className='my-10 font-semibold'>PANNEAU: Barques</p>
         <div className='flex flex-col space-y-5 sm:space-y-10 items-center'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 max-sm:pt-5 sm:my-10 gap-5 place-items-center'>
-            <img src="/assets/works/panneau-colombe-1.jpeg" alt="Panneau Colombe 1" className='h-[30vh] w-[40vh]' />
-            <img src="/assets/works/panneau-colombe-2.jpeg" alt="Panneau Colombe 2" className='h-[30vh] w-[40vh]' />
+          <div className='grid grid-cols-1 sm:grid-cols-2 max-sm:pt-5 sm:my-10 gap-5 place-items-center colombe-container'>
+            <img src="/assets/works/panneau-colombe-1.jpeg" alt="Panneau Colombe 1" className='h-[30vh] w-[40vh] colombe-1' />
+            <img src="/assets/works/panneau-colombe-2.jpeg" alt="Panneau Colombe 2" className='h-[30vh] w-[40vh] colombe-2' />
           </div>
-          <img src="/assets/works/panneau-colombe-3.jpeg" alt="Panneau Colombe 3" className='px-8 sm:px-10 w-full sm:w-1/2' />
+          <img src="/assets/works/panneau-colombe-3.jpeg" alt="Panneau Colombe 3" className='px-8 sm:px-10 w-full sm:w-1/2 colombe-3' />
         </div>
         <div className="flex flex-col text-center text-lg font-semibold mt-10 space-y-10">
           <p>

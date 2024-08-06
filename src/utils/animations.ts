@@ -106,4 +106,52 @@ export default [
       ease: "power2.out",
     },
   },
+  {
+    target: ".colombe-1",
+    fromOptions: {
+      x: -400,
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".colombe-container",
+        start: "top center",
+        end: "top end",
+        scrub: 1.5,
+      },
+      x: 0,
+      ease: "power2.out",
+    },
+  },
+  {
+    target: ".colombe-2",
+    fromOptions: {
+      x: 400,
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".colombe-container",
+        start: "top center",
+        end: "top end",
+        scrub: 1.5,
+      },
+      x: 0,
+      ease: "power2.out",
+    }
+  },
+  {
+    target: ".colombe-3",
+    fromOptions: {
+      y: 1000,
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".colombe-container",
+        start: "center center",
+        end: "end end",
+        scrub: 0.5,
+      },
+      y: 0,
+      ease: "easeInOut",
+    }
+  }
 ];
