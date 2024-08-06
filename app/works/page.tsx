@@ -79,9 +79,9 @@ const Works = () => {
           <div className='flex-col space-y-10 w-full'>
             <p>Échantillons / expérimentations de 10 x 20 cm. pour travailler différentes textures et couleurs sur le thème des coraux.</p>
             <div className="grid grid-cols-1 lg:grid-cols-3 items-center place-items-center gap-10">
-              <img src="/assets/works/workshop-1.jpeg" alt="Résultat céramique 1" className="h-full w-[20vh] object-cover" />
-              <img src="/assets/works/workshop-2.jpeg" alt="Résultat céramique 2" className="h-full w-[20vh] object-cover" />
-              <img src="/assets/works/workshop-3.jpeg" alt="Résultat céramique 3" className="h-full w-[20vh] object-cover" />
+              <img src="/assets/works/workshop-1.jpeg" alt="Workshop 1" className="h-full w-[20vh] object-cover" />
+              <img src="/assets/works/workshop-2.jpeg" alt="Workshop 2" className="h-full w-[20vh] object-cover" />
+              <img src="/assets/works/workshop-3.jpeg" alt="Workshop 3" className="h-full w-[20vh] object-cover" />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] gap-[5vw] art-container pt-5">
               <div className='flex flex-col gap-2'>
@@ -158,6 +158,70 @@ const Works = () => {
           <img src="/assets/works/exploration-6.jpeg" alt="Exploration 6" className='size-full lg:w-[17vw] lg:h-[30vh] object-cover' />
         </div>
         <p className='text-lg text-center pt-5'>Échantillons 10 x 10 cm pour travailler différent opus sur la peau du gecko.</p>
+      </section>
+      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
+        <div className='flex mt-10 gap-4 items-center'>
+          <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
+            <p className='text-xl font-semibold'>4</p>
+          </div>
+          <p className='text-xl font-semibold'>Échantillonnage pour un projet au Perreux sur Marne</p>
+        </div>
+        <div className='flex flex-col gap-5 my-10 ml-16'>
+          <p>PORCHE: Rivière</p>
+        </div>
+        <div className="grid grid-cols-3 items-center place-items-center gap-10">
+          <div className='flex flex-col gap-2'>
+            <img src="/assets/works/echantillonnage-1.jpeg" alt="Échantillonnage 1" className="h-[50vh] w-full object-cover" />
+            <p className='text-sm text-center'>5 x 20 cm</p>
+          </div>
+          <div className='flex flex-col gap-2'>
+            <img src="/assets/works/echantillonnage-2.jpeg" alt="Échantillonnage 2" className="h-[50vh] w-full object-cover" />
+            <p className='text-sm text-center'>5 x 20 cm</p>
+          </div>
+          <div className='flex flex-col gap-2'>
+            <img src="/assets/works/echantillonnage-3.jpeg" alt="Échantillonnage 3" className="h-[50vh] w-full object-cover" />
+            <p className='text-sm text-center'>5 x 20 cm</p>
+          </div>
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 my-10 gap-y-5  place-items-center'>
+          <div className='flex flex-col gap-2 items-center'>
+            <p className='text-center'>PANNEAU: Amarnez-vous</p>
+            <img src="/assets/works/echantillonnage-4.jpeg" alt="Échantillonnage 4" className="h-[40vh] w-full object-cover" />
+            <p className='text-sm text-center'>30 x 20 cm</p>
+          </div>
+          <div className='flex flex-col gap-2 items-center'>
+            <p className='text-center'>PANNEAU: Floraison</p>
+            <img src="/assets/works/echantillonnage-5.jpeg" alt="Échantillonnage 5" className="h-[40vh] w-full object-cover" />
+            <p className='text-sm text-center'>30 x 20 cm</p>
+          </div>
+          <div className='flex flex-col gap-2 items-center'>
+            <p className='text-center'>PANNEAU: Éveil printanier</p>
+            <img src="/assets/works/echantillonnage-6.jpeg" alt="Échantillonnage 6" className="h-[40vh] w-full object-cover" />
+            <p className='text-sm text-center'>30 x 20 cm</p>
+          </div>
+          <div className='flex flex-col gap-2 items-center'>
+            <p className='text-center'>PANNEAU: La traversée</p>
+            <img src="/assets/works/echantillonnage-7.jpeg" alt="Échantillonnage 7" className="h-[40vh] w-full object-cover" />
+            <p className='text-sm text-center'>30 x 20 cm</p>
+          </div>
+        </div>
+      </section>
+      <section className='flex flex-col m-[5vh_5vw] sm:m-[10vh_10vw]'>
+        <div className='flex mt-10 gap-4 items-center'>
+          <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
+            <p className='text-xl font-semibold'>5</p>
+          </div>
+          <p className='text-xl font-semibold'>PANNEAU COLOMBE</p>
+        </div>
+        <p className='text-lg text-center pt-5'>Travail collaboratif pour réaliser deux panneaux. Commande d'architecte pour un immeuble à Colombes.</p>
+        <p className='my-10'>PANNEAU: Barques</p>
+        <div className='flex flex-col space-y-5 sm:space-y-10 items-center'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 max-sm:pt-5 sm:my-10 gap-5 place-items-center'>
+            <img src="/assets/works/panneau-colombe-1.jpeg" alt="Panneau Colombe 1" className='h-[30vh] w-[40vh]' />
+            <img src="/assets/works/panneau-colombe-2.jpeg" alt="Panneau Colombe 2" className='h-[30vh] w-[40vh]' />
+          </div>
+          <img src="/assets/works/panneau-colombe-3.jpeg" alt="Panneau Colombe 3" className='px-8 sm:px-10 w-full sm:w-1/2' />
+        </div>
       </section>
     </>
   )
