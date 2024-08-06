@@ -198,5 +198,35 @@ export default [
       y: 0,
       ease: "easeInOut",
     }
+  }, {
+    target: ".workshop-1",
+    fromOptions: {
+      x: -200
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".workshop-container",
+        start: "top center",
+        end: "top end",
+        scrub: 0.5,
+      },
+      x: 0,
+      ease: "easeInOut",
+    }
+  }, {
+    target: ".workshop-3",
+    fromOptions: {
+      x: 200
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".workshop-container",
+        start: "top center",
+        end: "top end",
+        scrub: 0.5,
+      },
+      x: 0,
+      ease: "easeInOut",
+    }
   }
 ];

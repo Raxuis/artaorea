@@ -97,10 +97,10 @@ const Works = () => {
         <div className='flex mt-10 gap-4'>
           <div className='flex-col space-y-10 w-full'>
             <p>Échantillons / expérimentations de 10 x 20 cm. pour travailler différentes textures et couleurs sur le thème des coraux.</p>
-            <div className="grid grid-cols-3 items-center place-items-center gap-10">
-              <img src="/assets/works/workshop-1.jpeg" alt="Workshop 1" className="h-full w-[20vh] object-cover" />
-              <img src="/assets/works/workshop-2.jpeg" alt="Workshop 2" className="h-full w-[20vh] object-cover" />
-              <img src="/assets/works/workshop-3.jpeg" alt="Workshop 3" className="h-full w-[20vh] object-cover" />
+            <div className="grid grid-cols-3 items-center place-items-center gap-10 workshop-container">
+              <img src="/assets/works/workshop-1.jpeg" alt="Workshop 1" className="h-full w-[20vh] object-cover workshop-1" />
+              <img src="/assets/works/workshop-2.jpeg" alt="Workshop 2" className="h-full w-[20vh] object-cover workshop-2" />
+              <img src="/assets/works/workshop-3.jpeg" alt="Workshop 3" className="h-full w-[20vh] object-cover workshop-3" />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-[2fr_2fr] gap-[5vw] art-container pt-5">
               <div className='flex flex-col gap-2'>
