@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { scrollToAboutMe } from "@/utils/navigation";
+import { Footer } from "@/components/Footer";
 
 
 const AboutMe = () => {
@@ -72,6 +73,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

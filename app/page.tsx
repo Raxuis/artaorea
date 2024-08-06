@@ -11,6 +11,7 @@ import HorizontalDisplay from "@/components/HorizontalDisplay";
 import works from "@/constants/works";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,6 +93,7 @@ export default function Home() {
           <Link href="/works">Voir plus de mon travail</Link>
         </Button>
       </section>
+      <Footer />
     </>
   );
 }
