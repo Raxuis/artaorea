@@ -153,5 +153,50 @@ export default [
       y: 0,
       ease: "easeInOut",
     }
+  }, {
+    target: ".constellations-1",
+    fromOptions: {
+      x: -400,
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".constellations-container",
+        start: "top center",
+        end: "top end",
+        scrub: 1.5,
+      },
+      x: 0,
+      ease: "power2.out",
+    },
+  }, {
+    target: ".constellations-2",
+    fromOptions: {
+      x: 400,
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".constellations-container",
+        start: "top center",
+        end: "top end",
+        scrub: 1.5,
+      },
+      x: 0,
+      ease: "power2.out",
+    }
+  }, {
+    target: ".constellations-3",
+    fromOptions: {
+      y: 1000,
+    },
+    toOptions: {
+      scrollTrigger: {
+        trigger: ".constellations-container",
+        start: "center center",
+        end: "end end",
+        scrub: 0.5,
+      },
+      y: 0,
+      ease: "easeInOut",
+    }
   }
 ];

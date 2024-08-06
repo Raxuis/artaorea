@@ -236,11 +236,11 @@ const Works = () => {
             PANNEAU: Constellations
           </p>
           <div className='flex flex-col space-y-5 sm:space-y-10 items-center'>
-            <div className='grid grid-cols-1 sm:grid-cols-2  gap-5 place-items-center'>
-              <img src="/assets/works/constellations-1.jpeg" alt="Constellations 1" className='h-[30vh] w-[40vh]' />
-              <img src="/assets/works/constellations-2.jpeg" alt="Constellations 2" className='h-[30vh] w-[40vh]' />
+            <div className='grid grid-cols-1 sm:grid-cols-2  gap-5 place-items-center constellations-container'>
+              <img src="/assets/works/constellations-1.jpeg" alt="Constellations 1" className='h-[30vh] w-[40vh] constellations-1' />
+              <img src="/assets/works/constellations-2.jpeg" alt="Constellations 2" className='h-[30vh] w-[40vh] constellations-2' />
             </div>
-            <img src="/assets/works/constellations-3.jpeg" alt="Constellations 3" className='px-8 sm:px-10 w-full sm:w-1/2' />
+            <img src="/assets/works/constellations-3.jpeg" alt="Constellations 3" className='px-8 sm:px-10 w-full sm:w-1/2 constellations-3' />
           </div>
         </div>
       </Container>
