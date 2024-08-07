@@ -40,7 +40,7 @@ const Works = () => {
     <>
       <Header>
         <div className='flex flex-col items-center justify-center'>
-          <p className='text-3xl'>
+          <p className='text-3xl text-center'>
             Bienvenue sur ma page de travail
           </p>
           <p className='text-md text-center'>
