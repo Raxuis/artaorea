@@ -72,6 +72,16 @@ html {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Prevent horizontal scrolling */
+.mere-nature-container,
+.arbre-container,
+.fuite-container,
+.colombe-container,
+.constellations-container,
+.workshop-container {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   justify-content: center;
