@@ -78,8 +78,6 @@ html {
   align-items: center;
   height: 100vh;
   position: relative;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .sidebar {
