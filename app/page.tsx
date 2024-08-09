@@ -1,17 +1,15 @@
-// pages/index.js
 "use client";
 
-import Lenis from "lenis";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import animations from "@/utils/animations";
 import Header from "@/components/Header";
 import HorizontalDisplay from "@/components/HorizontalDisplay";
 import works from "@/constants/works";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { initializeLenis, runAnimations } from "@/utils/initiations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,26 +17,8 @@ export default function Home() {
   const container = useRef();
 
   useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    animations.forEach(({ target, fromOptions, toOptions, options }) => {
-      if (fromOptions) {
-        gsap.from(target, fromOptions);
-      }
-      if (toOptions) {
-        gsap.to(target, toOptions);
-      }
-      if (options) {
-        gsap.to(target, options);
-      }
-    });
+    initializeLenis();
+    runAnimations();
   }, []);
 
   return (

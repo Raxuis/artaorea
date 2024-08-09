@@ -3,11 +3,10 @@
 import Container from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import Header from '@/components/Header'
-import animations from '@/utils/animations';
-import Lenis from 'lenis';
 import React, { useEffect, useRef } from 'react'
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { initializeLenis, runAnimations } from '@/utils/initiations';
 
 
 
@@ -15,26 +14,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
   const container = useRef();
+
   useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-    animations.forEach(({ target, fromOptions, toOptions, options }) => {
-      if (fromOptions) {
-        gsap.from(target, fromOptions);
-      }
-      if (toOptions) {
-        gsap.to(target, toOptions);
-      }
-      if (options) {
-        gsap.to(target, options);
-      }
-    });
+    initializeLenis();
+    runAnimations();
   }, []);
   return (
     <>
