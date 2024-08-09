@@ -3,7 +3,7 @@
 import Lenis from "lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import animations from "@/utils/animations";
+import { animations } from "@/utils/animations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,14 +27,16 @@ export const runAnimations = () => {
   // => Avoiding issues on mobile (horizontal scroll)
   if (!isMobile) {
     animations.forEach(({ target, fromOptions, toOptions, options }) => {
+      const tl = gsap.timeline();
+
       if (fromOptions) {
-        gsap.from(target, fromOptions);
+        tl.from(target, fromOptions);
       }
+
       if (toOptions) {
-        gsap.to(target, toOptions);
-      }
-      if (options) {
-        gsap.to(target, options);
+        tl.to(target, toOptions);
+      } else {
+        tl.to(target, options);
       }
     });
   }

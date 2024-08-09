@@ -13,8 +13,6 @@ import { initializeLenis, runAnimations } from '@/utils/initiations';
 gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
-  const container = useRef();
-
   useEffect(() => {
     initializeLenis();
     runAnimations();

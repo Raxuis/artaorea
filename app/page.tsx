@@ -10,12 +10,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { initializeLenis, runAnimations } from "@/utils/initiations";
+import TransitionLink from "@/components/TransitionLink";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const container = useRef();
-
   useEffect(() => {
     initializeLenis();
     runAnimations();
@@ -69,8 +68,8 @@ export default function Home() {
             conscience qui s'ensuit.
           </p>
         </div>
-        <Button variant="outline" className="mt-10" asChild>
-          <Link href="/works">Voir plus de mon travail</Link>
+        <Button variant="outline" className="mt-10">
+          <TransitionLink href="/works" label="Voir plus de mon travail" />
         </Button>
       </section>
       <Footer />

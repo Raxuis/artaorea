@@ -1,9 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from 'next/navigation'
-import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { scrollToAboutMe, scrollToTypeOfWork } from "@/utils/navigation";
+import TransitionLink from "./TransitionLink";
+
+interface MenuItem {
+  href?: string;
+  label: string;
+  onClick?: () => void;
+}
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +26,43 @@ const BurgerMenu = () => {
     }
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen]);
+
+  const menuItems: MenuItem[] = [
+    { href: "/", label: "Accueil" },
+    { href: "/works", label: "Mes travaux" },
+    { href: "/contact", label: "Me contacter" },
+  ];
+
+  const additionalItems: { [key: string]: MenuItem[] } = {
+    "/about-me": [
+      { href: "/", label: "Accueil" },
+      { href: "/works", label: "Mes travaux" },
+      { href: "/contact", label: "Me contacter" },
+      { onClick: () => scrollToAboutMe(), label: "Mon parcours" },
+    ],
+    "/": [
+      { href: "/about-me", label: "À propos de moi" },
+      { href: "/works", label: "Mes travaux" },
+      { href: "/contact", label: "Me contacter" },
+    ],
+    "/contact": [
+      { href: "/", label: "Accueil" },
+      { href: "/works", label: "Mes travaux" },
+      { href: "/about-me", label: "À propos de moi" },
+    ],
+  };
+
+  const items = additionalItems[pathname] || menuItems;
 
   return (
     <>
@@ -44,35 +81,19 @@ const BurgerMenu = () => {
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <nav>
           <ul>
-            {
-              pathname === '/about-me' ?
-                <>
-                  <li><Link href="/">Accueil</Link></li>
-                  <li><Link href="/works">Mes travaux</Link></li>
-                  <li><Link href="/contact">Me contacter</Link></li>
-                  <li><a className="cursor-pointer" onClick={() => scrollToAboutMe()}>Mon parcours</a></li>
-                </>
-                : pathname === '/contact' ?
-                  <>
-                    <li><Link href="/">Accueil</Link></li>
-                    <li><Link href="/works">Mes travaux</Link></li>
-                    <li><Link href="/about-me">À propos de moi</Link></li>
-                  </>
-                  : pathname === '/' ?
-                    <>
-                      <li><Link href="/about-me">À propos de moi</Link></li>
-                      <li><Link href="/works">Mes travaux</Link></li>
-                      <li><Link href="/contact">Me contacter</Link></li>
-                    </>
-                    :
-                    <>
-                      <li><Link href="/">Accueil</Link></li>
-                      <li><Link href="/about-me">À propos de moi</Link></li>
-                      <li><Link href="/contact">Me contacter</Link></li>
-                      <li><a className="cursor-pointer" onClick={() => scrollToTypeOfWork('ceramique')}>Céramique</a></li>
-                      <li><a className="cursor-pointer" onClick={() => scrollToTypeOfWork('mosaique')}>Mosaïque</a></li>
-                    </>
-            }
+            {items.map((item, index) =>
+              item.href ? (
+                <li key={index}>
+                  <TransitionLink href={item.href} label={item.label} onClick={closeMenu} />
+                </li>
+              ) : (
+                <li key={index}>
+                  <a className="cursor-pointer" onClick={() => { item.onClick?.(); closeMenu(); }}>
+                    {item.label}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </nav>
       </div>

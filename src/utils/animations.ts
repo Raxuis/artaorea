@@ -1,4 +1,4 @@
-export default [
+export const animations = [
   {
     target: ".mere-nature-container",
     options: {
@@ -136,7 +136,7 @@ export default [
       },
       x: 0,
       ease: "power2.out",
-    }
+    },
   },
   {
     target: ".colombe-3",
@@ -152,8 +152,9 @@ export default [
       },
       y: 0,
       ease: "easeInOut",
-    }
-  }, {
+    },
+  },
+  {
     target: ".constellations-1",
     fromOptions: {
       x: -400,
@@ -168,7 +169,8 @@ export default [
       x: 0,
       ease: "power2.out",
     },
-  }, {
+  },
+  {
     target: ".constellations-2",
     fromOptions: {
       x: 400,
@@ -182,8 +184,9 @@ export default [
       },
       x: 0,
       ease: "power2.out",
-    }
-  }, {
+    },
+  },
+  {
     target: ".constellations-3",
     fromOptions: {
       y: 1000,
@@ -197,11 +200,12 @@ export default [
       },
       y: 0,
       ease: "easeInOut",
-    }
-  }, {
+    },
+  },
+  {
     target: ".workshop-1",
     fromOptions: {
-      x: -200
+      x: -200,
     },
     toOptions: {
       scrollTrigger: {
@@ -212,11 +216,12 @@ export default [
       },
       x: 0,
       ease: "easeInOut",
-    }
-  }, {
+    },
+  },
+  {
     target: ".workshop-3",
     fromOptions: {
-      x: 200
+      x: 200,
     },
     toOptions: {
       scrollTrigger: {
@@ -227,6 +232,6 @@ export default [
       },
       x: 0,
       ease: "easeInOut",
-    }
-  }
+    },
+  },
 ];
