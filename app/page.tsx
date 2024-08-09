@@ -42,9 +42,9 @@ export default function Home() {
           </p>
         </div>
         <div className="art-apparence-showing grid grid-cols-1 lg:grid-cols-3 items-center gap-5">
-          <img src="/assets/works/apparence-1.jpeg" alt="Apparence 1" className="apparence-1 h-[50vh] sm:h-[30vh] w-full lg:w-[20vw] object-cover" />
-          <img src="/assets/works/apparence-2.jpeg" alt="Apparence 2" className="apparence-2 h-[50vh] sm:h-[30vh] w-full lg:w-[20vw] object-cover" />
-          <img src="/assets/works/apparence-3.jpeg" alt="Apparence 3" className="apparence-3 h-[50vh] sm:h-[30vh] w-full lg:w-[20vw] object-cover" />
+          <img src="/assets/works/apparence/apparence-1.webp" alt="Apparence 1" className="apparence-1 h-[50vh] sm:h-[30vh] w-full lg:w-[20vw] object-cover" />
+          <img src="/assets/works/apparence/apparence-2.webp" alt="Apparence 2" className="apparence-2 h-[50vh] sm:h-[30vh] w-full lg:w-[20vw] object-cover" />
+          <img src="/assets/works/apparence/apparence-3.webp" alt="Apparence 3" className="apparence-3 h-[50vh] sm:h-[30vh] w-full lg:w-[20vw] object-cover" />
         </div>
       </section>
       <section className="m-[10vh_10vw] text-center flex flex-col items-center gap-[20vh] arts-col">
@@ -57,9 +57,9 @@ export default function Home() {
           <p>Technique: crayon de couleur</p>
         </div>
         <div className="art-bd-showing grid grid-cols-1 lg:grid-cols-3 items-center mt-5 gap-10">
-          <img src="/assets/works/bd-1.jpeg" alt="bd 1" className="bd-1 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
-          <img src="/assets/works/bd-2.jpeg" alt="bd 2" className="bd-2 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
-          <img src="/assets/works/bd-3.jpeg" alt="bd 3" className="bd-3 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
+          <img src="/assets/works/bd/bd-1.webp" alt="bd 1" className="bd-1 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
+          <img src="/assets/works/bd/bd-2.webp" alt="bd 2" className="bd-2 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
+          <img src="/assets/works/bd/bd-3.webp" alt="bd 3" className="bd-3 w-full md:w-[40vw] lg:w-[20vw] h-full md:h-[50vh]" />
         </div>
         <div className="art-content art-content-bd text-lg xl:text-xl mt-2 text-center">
           <p>
