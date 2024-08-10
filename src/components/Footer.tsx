@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "@radix-ui/react-icons";
+import TransitionLink from "./TransitionLink";
 
 type Link = {
   text: string;
@@ -27,21 +28,27 @@ export function Footer() {
         </a>
         <ul className="flex items-center justify-center gap-x-10">
           {links.map((link, index) => (
-            <li
+            <TransitionLink
               key={index}
+              href={link.url}
+              label={
+                <p className="cursor-pointer">{link.text}</p>
+              }
               className="text-[15px]/normal font-medium text-neutral-400 transition-all duration-100 ease-linear hover:text-cyan hover:underline hover:underline-offset-4 dark:font-medium hover:dark:text-neutral-100"
             >
-              <a href={link.url}>{link.text}</a>
-            </li>
+            </TransitionLink>
           ))}
         </ul>
-        <a
+        <TransitionLink
           href="/contact"
           className="inline-flex w-fit items-center justify-center gap-x-1 rounded-md bg-cyan px-6 py-2 text-sm font-semibold tracking-tighter text-white ring-1 transition duration-200 hover:ring-2 hover:ring-cyan hover:ring-offset-2 lg:h-12 lg:text-base"
-        >
-          Me contacter
-          <ChevronRightIcon className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
-        </a>
+          label={
+            <>
+              Me contacter
+              <ChevronRightIcon className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
+            </>
+          }
+        />
       </div>
     </footer>
   );
