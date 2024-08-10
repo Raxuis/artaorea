@@ -31,9 +31,7 @@ export function Footer() {
             <TransitionLink
               key={index}
               href={link.url}
-              label={
-                <p className="cursor-pointer">{link.text}</p>
-              }
+              label={link.text}
               className="text-[15px]/normal font-medium text-neutral-400 transition-all duration-100 ease-linear hover:text-cyan hover:underline hover:underline-offset-4 dark:font-medium hover:dark:text-neutral-100"
             >
             </TransitionLink>
