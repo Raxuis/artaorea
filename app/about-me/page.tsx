@@ -28,7 +28,7 @@ const AboutMe = () => {
     <>
       <Header>
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="flex justify-center sm:items-center gap-10 sm:gap-20 max-sm:flex-col">
+          <div className="flex justify-center items-center gap-10 sm:gap-20 max-sm:flex-col">
             <Image src="/assets/aurea-profile.png" width={200} height={200} alt="Auréa Close" />
             <div className="flex flex-col description">
               <h1>Auréa Close</h1>
