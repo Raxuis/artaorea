@@ -1,12 +1,11 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Portfolio Updated" />
+  <img src="./.github/app.gif" alt="Artaorea" />
 
 &#xa0;
 
-  <!-- <a href="https://portfolioupdated.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Portfolio Updated</h1>
+<h1 align="center">Artaorea</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/Raxuis/artaorea?color=56BEB8">
@@ -66,7 +65,7 @@ $ npm run dev
 
 ## :memo: License
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. For more details, see the [LICENSE](LICENSE.md) file.
 
 Made with :heart: by <a href="https://github.com/Raxuis" target="_blank">Raphaël</a>
 
