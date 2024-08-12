@@ -56,7 +56,7 @@ const Contact = () => {
     <div className='no-scroll'>
       <Header>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-md">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-md max-sm:px-2">
             <FormField
               control={form.control}
               name="name"
