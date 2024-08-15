@@ -136,11 +136,11 @@ const Works = () => {
           <div className='size-12 rounded-full bg-cyan flex justify-center items-center'>
             <p className='text-xl font-semibold'>3</p>
           </div>
-          <p className='text-xl font-semibold'>Exploration de l'oeil et de la peau animale</p>
+          <p className='text-xl font-semibold'>Exploration de l'œil et de la peau animale</p>
         </div>
         <div className="art-content art-content-apparence text-center text-lg xl:text-xl my-10">
           <p>
-            Créer un contraste entre la peau et l'oeil par l'utilisation conjointe de la pose directe et inversée.
+            Créer un contraste entre la peau et l'œil par l'utilisation conjointe de la pose directe et inversée.
           </p>
         </div>
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 place-items-center'>
