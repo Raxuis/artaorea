@@ -210,14 +210,6 @@ html {
   transform: rotate(-90deg);
 }
 
-.arts-apparence {
-  margin: 20vh 10vw 10vh 10vw;
-}
-
-.arts-bd {
-  margin: 10vh 10vw;
-}
-
 @media (max-width: 768px) {
   .character-container,
   .about-me-container {
