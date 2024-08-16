@@ -65,12 +65,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
-}
-
-html {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .header {
@@ -92,10 +87,6 @@ html {
   transition: right 0.3s ease;
   z-index: 1000;
   padding: 20px;
-}
-
-.sidebar nav ul li {
-  margin: 20px 0;
 }
 
 .sidebar nav ul li a {
