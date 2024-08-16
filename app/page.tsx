@@ -23,12 +23,12 @@ export default function Home() {
   return (
     <>
       <Header imageSrc="/assets/character.png" alt="Artaoréa" link="https://instagram.com/art_aorea" />
-      <section className="m-[5vh_5vw] sm:m-[10vh_10vw] text-center flex flex-col items-center sm:gap-[25vh] arts-col" id="works">
+      <section className="m-[5vh_5vw] sm:m-[10vh_10vw] text-center flex flex-col items-center gap-[25vh] arts-col" id="works">
         {works.slice(0, 3).map((work, index) => (
           <HorizontalDisplay key={index} {...work} />
         ))}
       </section>
-      <section className="my-[10vh] mx-[10vw] sm:mt-[20vh] flex flex-col items-center">
+      <section className="my-[10vh] mx-[10vw] mt-[20vh] flex flex-col items-center">
         <div className="art-header bg-cyan text-white w-full text-center p-5 space-y-1">
           <h1 className="border-b border-white inline-flex">L'apparence cachée</h1>
           <p>20 x 20 x 30 cm</p>
