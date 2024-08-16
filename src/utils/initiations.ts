@@ -20,12 +20,10 @@ export const initializeLenis = () => {
 
 export const runAnimations = () => {
 
+  // 👇 Can be useful if issues with mobile devices
   // Detecting screen size
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  // const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  // Run animations only if not on mobile
-  // => Avoiding issues on mobile (horizontal scroll)
-  // if (!isMobile) {
   animations.forEach(({ target, fromOptions, toOptions, options }) => {
     const tl = gsap.timeline();
 
@@ -39,5 +37,4 @@ export const runAnimations = () => {
       tl.to(target, options);
     }
   });
-  // }
 }
