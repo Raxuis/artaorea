@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import TransitionLink from "./TransitionLink";
+import Image from "next/image";
 
 type Link = {
   text: string;
@@ -14,13 +15,16 @@ const links: Link[] = [
 
 export function Footer() {
   return (
-    <footer className="px-5 py-5 lg:px-10">
-      <div className="flex w-full flex-col items-center justify-between gap-x-5 gap-y-5 md:flex-row">
+    <footer className="p-5 lg:px-10">
+      <div className="flex w-full flex-col items-center justify-between gap-5 md:flex-row">
         <a href="#" className="flex items-center gap-x-2">
-          <img
-            className="h-8 w-8 rounded-full"
+          <Image
+            width={32}
+            height={32}
+            className="size-8 rounded-full"
             src="/assets/icons/logo.png"
             alt="Artaorea"
+            priority
           />
           <h2 className="font-bold text-neutral-900 dark:text-white">
             Artaorea

@@ -1,5 +1,6 @@
 import React from 'react'
 import BurgerMenu from './BurgerMenu'
+import Image from 'next/image'
 
 type HeaderProps = {
   children?: React.ReactNode,
@@ -16,7 +17,17 @@ const Header = ({ children, imageSrc, link, alt }: HeaderProps) => (
   <div className="header">
     <Bubbles />
     {imageSrc ? <div className="character-container">
-      <img src={imageSrc} alt={alt} className="character" onClick={link ? handleClick({ link }) : undefined} />
+      <Image
+        src={imageSrc}
+        alt={alt || ''}
+        className="character"
+        onClick={link ? handleClick({ link }) : undefined}
+        width={1000}
+        height={1000}
+        priority
+        placeholder="blur"
+        blurDataURL={imageSrc}
+      />
     </div> : null}
     {children}
     <BurgerMenu />
@@ -27,16 +38,40 @@ const Bubbles = () => {
   return (
     <>
       <div className="top-left-bubble">
-        <img src="/assets/icons/shape-1.png" alt="shape-1" className="shape shape-1" />
+        <Image
+          src="/assets/icons/shape-1.png"
+          alt="shape-1"
+          className="shape shape-1"
+          width={1000}
+          height={1000}
+        />
       </div>
       <div className="top-right-bubble">
-        <img src="/assets/icons/shape-2.png" alt="shape-2" className="shape shape-2" />
+        <Image
+          src="/assets/icons/shape-2.png"
+          alt="shape-2"
+          className="shape shape-2"
+          width={1000}
+          height={1000}
+        />
       </div>
       <div className="bottom-left-bubble">
-        <img src="/assets/icons/shape-2.png" alt="shape-1" className="shape shape-3" />
+        <Image
+          src="/assets/icons/shape-2.png"
+          alt="shape-1"
+          className="shape shape-3"
+          width={1000}
+          height={1000}
+        />
       </div>
       <div className="bottom-right-bubble">
-        <img src="/assets/icons/shape-1.png" alt="shape-2" className="shape shape-4" />
+        <Image
+          src="/assets/icons/shape-1.png"
+          alt="shape-2"
+          className="shape shape-4"
+          width={1000}
+          height={1000}
+        />
       </div>
     </>
   )
