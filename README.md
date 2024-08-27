@@ -1,5 +1,5 @@
 <div align="center" id="top">
-  <img src="https://i.ibb.co/c39cqVn/artaorea.jpg" alt="Artaorea" />
+  <img src="https://i.ibb.co/Jm7SSvL/artaorea.jpg" alt="Artaorea" />
 
 &#xa0;
 
