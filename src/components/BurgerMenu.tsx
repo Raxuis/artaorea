@@ -80,7 +80,7 @@ const BurgerMenu = () => {
       </div>
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <nav>
-          <ul className="flex flex-col space-y-2 mt-4">
+          <ul className="mt-4 flex flex-col space-y-2">
             {items.map((item, index) =>
               item.href ? (
                 <li key={index}>
