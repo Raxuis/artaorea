@@ -73,7 +73,7 @@ const BurgerMenu = () => {
           viewBox="0 -960 960 960"
           width="24px"
           fill={isOpen ? "#fff" : "#000"}
-          className={`burger-menu-icon ${isOpen ? "active" : ""}`}
+          className={`burger-menu-icon transition-all duration-300 ${isOpen ? "active" : ""}`}
         >
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
