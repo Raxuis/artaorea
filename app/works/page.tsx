@@ -7,6 +7,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { initializeLenis, runAnimations } from '@/utils/initiations';
+import { motion } from "framer-motion";
 
 
 
@@ -20,14 +21,23 @@ const Works = () => {
   return (
     <>
       <Header>
-        <div className='flex flex-col items-center justify-center'>
+        <motion.div className='flex flex-col items-center justify-center' animate={{
+          translateY: [5, -5, 5],
+          opacity: [0.6, 1, 0.6],
+          transition: {
+            duration: 2,
+            ease: 'easeInOut',
+            repeat: Infinity,
+            yoyo: true,
+          },
+        }}>
           <p className='text-center text-3xl'>
             Bienvenue sur ma page de travail
           </p>
-          <p className='text-md text-center'>
+          <p className='text-center text-base'>
             Ici, je vous montre mes différentes oeuvres en fonction de mon parcours professionnel.
           </p>
-        </div>
+        </motion.div>
       </Header>
       <Container>
         <div className="art-header mx-auto w-2/3 bg-cyan p-5 text-center text-white" id='ceramique'>
