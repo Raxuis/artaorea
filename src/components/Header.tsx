@@ -1,6 +1,7 @@
 import React from 'react'
 import BurgerMenu from './BurgerMenu'
 import Image from 'next/image'
+import { motion, useAnimate } from 'framer-motion';
 
 type HeaderProps = {
   children?: React.ReactNode,
@@ -13,26 +14,36 @@ const handleClick = ({ link }: { link?: string }) => () => {
   window.open(link, '_blank');
 }
 
-const Header = ({ children, imageSrc, link, alt }: HeaderProps) => (
-  <div className="header">
-    <Bubbles />
-    {imageSrc ? <div className="character-container">
-      <Image
-        src={imageSrc}
-        alt={alt || ''}
-        className="character"
-        onClick={link ? handleClick({ link }) : undefined}
-        width={1000}
-        height={1000}
-        priority
-        placeholder="blur"
-        blurDataURL={imageSrc}
-      />
-    </div> : null}
-    {children}
-    <BurgerMenu />
-  </div>
-)
+const Header = ({ children, imageSrc, link, alt }: HeaderProps) => {
+
+  return (
+    <div className="header">
+      <Bubbles />
+      {imageSrc ? <motion.div className="character-container" animate={{
+        scale: [1, 1.1],
+        transition: {
+          duration: 1.5,
+          ease: 'easeInOut',
+          repeat: Infinity
+        },
+      }} >
+        <Image
+          src={imageSrc}
+          alt={alt || ''}
+          className="character"
+          onClick={link ? handleClick({ link }) : undefined}
+          width={1000}
+          height={1000}
+          priority
+          placeholder="blur"
+          blurDataURL={imageSrc}
+        />
+      </motion.div> : null}
+      {children}
+      <BurgerMenu />
+    </div>
+  )
+}
 
 const Bubbles = () => {
   return (
