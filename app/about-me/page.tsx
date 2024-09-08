@@ -34,7 +34,7 @@ const AboutMe = () => {
               <h1>Auréa Close</h1>
               <p>19 ans</p>
               <p>Rambouillet, France</p>
-              <Button variant="link" asChild className="text-md p-0 font-normal">
+              <Button variant="link" asChild className="p-0 text-base font-normal">
                 <a
                   href="https://ensaama.net/site/home/formations/dnmade"
                   target="_blank"
