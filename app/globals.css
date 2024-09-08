@@ -243,7 +243,7 @@ html {
 }
 
 .description {
-  animation: reveal-description 0.5s ease-in-out;
+  animation: reveal-description 1.2s ease-in-out;
   animation-fill-mode: forwards;
 }
 
