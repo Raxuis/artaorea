@@ -212,6 +212,10 @@ html {
     width: 40vw;
     height: 40vw;
   }
+
+  .shape-2 {
+    padding-right: 16px;
+  }
 }
 
 .mouse-scroll {
