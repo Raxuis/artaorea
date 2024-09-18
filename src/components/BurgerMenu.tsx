@@ -60,6 +60,11 @@ const BurgerMenu = () => {
       { href: "/works", label: "Mes travaux" },
       { href: "/about-me", label: "À propos de moi" },
     ],
+    "/works": [
+      { href: "/", label: "Accueil" },
+      { href: "/about-me", label: "À propos de moi" },
+      { href: "/contact", label: "Me contacter" },
+    ],
   };
 
   const items = additionalItems[pathname] || menuItems;
